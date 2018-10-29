@@ -3,13 +3,16 @@ const addTask = {
         const form = document.getElementById('add-task');
 
         form.addEventListener('submit', function(event) {
+            
             event.preventDefault();
-
+            console.log('eventListener working');
+            
+            
             const elements = form.elements;
 
             const task = {
-                task: 'Finish lab',
-                due: new Date('10/30/2018')
+                task: elements.task.value,
+                due: elements.due.value
             };
             onAdd(task);
 
@@ -18,7 +21,5 @@ const addTask = {
         });
     }
 };
-
-
 
 export default addTask;
