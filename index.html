@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grocery List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/add-todo.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+
+</head>
+<body>
+    <header>
+        <h1>To do List</h1>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Add task</h2>
+            <form id="task-form">
+                <label>
+                    Task:
+                    <input required name="task">
+                </label>
+                <label>
+                    Due:
+                    <input required name ="due">
+                </label>
+                <label>
+                    Image:
+                    <input name="image">
+                </label>
+                <label>
+                    <button class ="action">Add</button>
+                </label>
+            </form>
+        </section>
+
+        <section>
+            <h2>List</h2>
+            <ul id="list"></ul>
+        </section>
+
+    </main>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
