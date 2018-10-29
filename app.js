@@ -1,7 +1,16 @@
-import todoApi from './todoApi.js';
-import addToDo from './addTodo.js';
-import list from './list.js';
+import todoApi from './todo-Api.js';
+import addToDo from './add-Todo.js';
+import todoList from './todo-List.js';
 
-addTodo.init(function(toDo){
+const todos = todoApi.getAll();
 
+
+todoList.init(todos, function(todo) {
+
+    todoApi.remove(todo);
+});
+
+addToDo.init(function(todo){
+    todoApi.add(todo);
+    todoList.add(todo);
 });

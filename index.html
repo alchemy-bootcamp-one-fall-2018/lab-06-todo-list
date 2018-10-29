@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To Do App</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
@@ -12,19 +13,20 @@
     </header>
 
     <main>
-        <section>
+        <section id="add-todos">
+            <h1>Add a To Do</h1>
             <form id="to-do-form">
                 <input type="text" name="title">
+                <input type="date" name="date">
+                <button class="action">Add ToDo</button>
             </form>
         </section>
             
         <section>
-            <ul>
-                <li>
-                    
-                </li>
-            </ul>
+            <h2>To do!</h2>
+            <ul id="todo"></ul>
         </section>
     </main>
+    <script type="module" src="app.js"></script>
 </body>
 </html>
