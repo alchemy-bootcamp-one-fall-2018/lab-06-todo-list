@@ -1,3 +1,5 @@
+'use strict';
+
 const addTodo = {
     init(onAdd) {
         const form = document.getElementById('add-form');

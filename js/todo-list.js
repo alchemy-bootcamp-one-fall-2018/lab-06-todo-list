@@ -1,8 +1,9 @@
 /* eslint-disable no-console */
+'use strict';
 
 function makeTodo(todo) {
     const html = /*html*/`
-        <li class="todo">
+        <li class="todo ${todo.date < Date.now() ? 'date-passed' : ''}">
             <h3 class="task">
                 ${todo.task}
             </h3>
@@ -14,11 +15,8 @@ function makeTodo(todo) {
     `;
 
     const template = document.createElement('template');
-
     template.innerHTML = html;
-
-    return template.content;
-    
+    return template.content; 
 }
 
 const list = document.getElementById('todos');
