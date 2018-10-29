@@ -11,12 +11,12 @@
 </head>
 <body>
     <header>
-        <img class="logo" src="assets/caripizza.jpeg">
+        <img class="logo" src="assets/caripizza.png">
         <h1>
-            This is the H1 for your Todos!
+            Todo List
         </h1>
     </header>
-    <main id="add-todo">
+    <div id="add-todo">
         <h2>Add a todo</h2>
         <form id="add-todo-form">
             <label>
@@ -31,12 +31,15 @@
                 Done:
                 <input required name="done"/>
             </label>
+            <label>
+                <button class="action">Add</button>
+            </label>
         </form>
         <section>
             <h2>Todos</h2>
             <ul id="todos"></ul>
         </section>
-    </main>
+    </div>
     <script type="module" src="js/app.js"></script>
 </body>
 </html>
