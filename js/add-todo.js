@@ -27,7 +27,6 @@ const addToDo = {
             console.log(task);
             // new data is pasted into the task variable 
             onAdd(task);
-           
 
             form.reset();
             document.activeElement.blur();

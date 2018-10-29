@@ -7,11 +7,14 @@ function makeTask(task) {
         <li class="tasks">
             <p> 
                 ${task.item}
+            </p>
+            <p>
                 ${task.date}
             </p>
             <button class="remove">X</button>
         </li>
         `; 
+    
 
 
         // command to create html to be placed in the template into the HTML doc
