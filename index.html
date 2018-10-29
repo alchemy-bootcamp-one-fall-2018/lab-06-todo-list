@@ -16,19 +16,19 @@
     <main>
         <section>
             <form id="form-todo">
-                <label>
-                    <h3>Add a Task</h2>
-                    <input type="text" name="task" id="task" value="finish the lab">
+                <label class="label">
+                    <strong>Add a Task</strong>
+                    <input type="text" name="task" id="task" required>
                 </label>
-                <label>
-                    <h3>Due Date</h2>
-                <input type="date" id="due" name="due"></label>
+                <label class="label">
+                <strong>Due Date</strong>
+                <input type="date" id="due" name="due" required></label>
                 <label for="submit"><button class="action">Add</button></label>
             </form>
         </section>
 
-        <section>
-            <h2>Tasks</h2>
+        <section id="class-list">
+            <h3>Tasks</h3>
             <ul id="task-list"></ul>
         </section>
     </main>

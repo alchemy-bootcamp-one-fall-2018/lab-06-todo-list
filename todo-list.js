@@ -3,7 +3,7 @@
 function makeTodo(tasks) { 
     const html = /*html*/ `
     <li class="task-item">
-        <h3 class="task">${tasks.task}</h3>
+        <p class="task">${tasks.task}</p>
         <p>${tasks.date}</p>
         <button class="danger">X</button>
     </li>
