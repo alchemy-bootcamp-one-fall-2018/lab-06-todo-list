@@ -7,8 +7,6 @@ const store = {
 
     init(todo){
         this.data.push(todo);
-        console.log(this.data);
-
     }
 };
 
