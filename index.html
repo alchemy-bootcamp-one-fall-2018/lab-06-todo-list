@@ -11,31 +11,30 @@
 </head>
 <body>
     <header>
+        <img class="logo" src="assets/caripizza.jpeg">
         <h1>
             This is the H1 for your Todos!
         </h1>
     </header>
-    <main>
-        <form>
+    <main id="add-todo">
+        <h2>Add a todo</h2>
+        <form id="add-todo-form">
             <label>
-                Task
-                <input/>
+                Task:
+                <input required name="task"/>
             </label>
             <label>
-                Due
-                <input/>
+                Due:
+                <input required name="due"/>
             </label>
             <label>
-                Done
-                <input/>
+                Done:
+                <input required name="done"/>
             </label>
         </form>
         <section>
-            <ul>
-                <li>
-                    list item
-                </li>
-            </ul>
+            <h2>Todos</h2>
+            <ul id="todos"></ul>
         </section>
     </main>
     <script type="module" src="js/app.js"></script>

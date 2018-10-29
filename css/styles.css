@@ -1,7 +1,17 @@
 * {
     font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 8 auto;
 }
 
 header {
-    background-color: lightseagreen;
+    text-align: center;
+}
+
+img {
+    width: 5em;
+}
+main {
+    display: flex;
+    flex-direction: column;
 }
