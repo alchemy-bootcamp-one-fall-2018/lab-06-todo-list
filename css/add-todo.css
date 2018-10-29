@@ -1,3 +1,31 @@
-.date-passed {
-    background-color: red;
+#add-todo {
+    background: darkgray;
+    color: black;
+}
+
+form {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+label {
+    padding-right: 15px;
+    font-weight: bold;
+}
+
+button {
+    border-radius: 5px;
+    font-family: tahoma;
+    font-size: 0.8em;
+    background-color: rgb(144,238,144);
+    border: 2px solid black;
+}
+
+input {
+    border: 1px solid black;
+    font-size: 0.9em;
+    padding: 2px;
 }
