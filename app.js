@@ -11,4 +11,8 @@ addTodo.init(function(task) {
 });
 
 const tasks = todoApi.getAll();
-todoList.init(tasks);
+
+todoList.init(tasks, function(task) {
+    todoApi.remove(task);
+});
+
