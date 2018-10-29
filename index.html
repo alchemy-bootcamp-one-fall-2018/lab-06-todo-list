@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <h1>Get Stuff Done</h1>
+    </header>
+    <main>
+        <h2>Add a Task!</h2>
+        <section id="add-task">
+            <form id="add-form">
+                <label>
+                    Task:
+                    <input required name="task">
+                </label>
+                <label>
+                    Due Date:
+                    <input required name="duedate">
+                </label>
+                    <button class="action">Add</button>
+            </form>
+        </section>
+        <section>
+            <h2>Tasks to get done:</h2>
+            <ul id="tasks"></ul>    <!--where the tasks will go, imported from xx.js-->
+        </section>    
+    </main>
+</body>
+</html>
