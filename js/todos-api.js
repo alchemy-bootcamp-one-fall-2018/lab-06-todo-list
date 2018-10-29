@@ -5,7 +5,7 @@ let todos = [
     },
     {
         task: 'Run',
-        date: new Date.now()
+        date: new Date('10/31/2018')
     }
 ];
 

@@ -5,11 +5,11 @@ const addTodo = {
         form.addEventListener('submit', function(event) {
             event.preventDefault();
 
-            const element = form.elements;
+            const elements = form.elements;
 
             const todo = {
                 task: elements.task.value,
-                due: elements.due.value
+                date: elements.date.value
             };
 
             onAdd(todo);

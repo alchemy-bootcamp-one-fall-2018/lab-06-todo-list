@@ -1,11 +1,11 @@
 import addTodo from './add-todo.js';
 import todoList from './todo-list.js';
-import todoApi from './todos-api.js';
+import todosApi from './todos-api.js';
 
 const todos = todosApi.getAll();
 
 todoList.init(todos, function(todo) {
-    todoApi.remove(todo);
+    todosApi.remove(todo);
 });
 
 addTodo.init(function(todo) {
