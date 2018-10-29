@@ -21,13 +21,16 @@ const addToDo = {
 
             const task = {
 
-                name: elements.task.value,
-                date: elements.Date.value
+                item: elements.taskInput.value,
+                date: elements.dueDate.value
             };
+            console.log(task);
+            // new data is pasted into the task variable 
             onAdd(task);
+           
 
             form.reset();
-            document.activeElement.blue();
+            document.activeElement.blur();
         });
     }
 };
