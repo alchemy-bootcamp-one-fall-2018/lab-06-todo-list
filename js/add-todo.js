@@ -1,4 +1,4 @@
-const addTask = {
+const addTodo = {
     init(onAdd) {        //init method for initializing the component
         const form = document.getElementByID('add-form');
         form.addEventListener('submit', function(event) {
@@ -6,7 +6,7 @@ const addTask = {
             const elements = form.elements;
             const task = {
                 task: elements.task.value,
-                duedate: elements.duedate.value
+                duedate: new Date(elements.duedate.value)
             };
             onAdd(task);
         
@@ -16,4 +16,4 @@ const addTask = {
     }
 };
 
-export default addTask;
+export default addTodo;
