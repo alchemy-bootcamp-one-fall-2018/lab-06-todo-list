@@ -7,7 +7,7 @@ Build a todo list app!
 
 User wants to:
 
-* see list of todos (saved in `localStorage`) when page is loaded
+* see list of todos (saved in `localStorage`) wconsthen page is loaded
 * add a new todo (via form) that is saved and new DOM added to page
 * See the todo displayed differently if it is overdue
 * remove a todo (via click) so that saved data is updated and DOM removed from page
