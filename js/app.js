@@ -1,0 +1,2 @@
+// put in strict line
+
