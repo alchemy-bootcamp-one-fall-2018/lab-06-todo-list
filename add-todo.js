@@ -8,17 +8,17 @@ const addTodo = {
             event.preventDefault();
 
             const elements = form.elements;
-            const date = new Date(dateInput.value);
+            const date = new Date(elements.due.value);
 
-            const tasks = {
+            const task = {
                 task: elements.task.value,
-                date: elements.date.value
-            }
+                date: date
+            };
 
-            onAdd(tasks);
-        }
+            onAdd(task);
+        });
     }
 
-}
+};
 
 export default addTodo;
