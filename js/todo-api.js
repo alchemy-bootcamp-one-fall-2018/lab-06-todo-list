@@ -13,14 +13,20 @@ function saveItems() {
     localStorage.setItem('items', JSON.stringify(items)); 
 }
 
+function customParser(key, value) {
+    if(key !== 'due') return value;
+    return new Date(value);
+}
+
 const itemsApi = {
     getAll() {
         const json = localStorage.getItem('items'); 
         if(json) {
-            items = JSON.parse(json); 
+            items = JSON.parse(json, customParser); 
         }
         return items; 
     }, 
+
     add(item) {
         items.push(item);   
         saveItems();
@@ -33,5 +39,5 @@ const itemsApi = {
         }
     }
 }; 
-
+saveItems();
 export default itemsApi;

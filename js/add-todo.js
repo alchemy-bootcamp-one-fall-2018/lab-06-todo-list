@@ -4,13 +4,15 @@ const addItem = {
     // 1. passed data or callback functions
     // 2. setup some event listeners
 
-    init() {
+    init(addItem) {
         const form = document.getElementById('add-form'); 
 
         form.addEventListener('submit', function(event) {
 
+            
             event.preventDefault();
-
+            
+            console.log("hey"); 
         
     
             const elements = form.elements;
