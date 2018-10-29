@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To Do List</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="todo-list.css">
 </head>
 <body>
     <header>
@@ -14,14 +15,15 @@
 
     <main>
         <section>
-            <form action="">
+            <form id="form-todo">
                 <label>
                     <h3>Add a Task</h2>
                     <input type="text" name="task" id="task" value="finish the lab">
                 </label>
                 <label>
                     <h3>Due Date</h2>
-                <input type="date" value="10/30/2018"></label>
+                <input type="date" id="due" name="due"></label>
+                <label for="submit"><button class="action">Add</button></label>
             </form>
         </section>
 
@@ -35,5 +37,8 @@
             </ul>
         </section>
     </main>
+
+    <script type="module" src="app.js"></script>
+
 </body>
 </html>

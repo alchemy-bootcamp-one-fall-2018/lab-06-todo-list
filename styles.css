@@ -2,3 +2,19 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+* {
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    background: #000000;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#todo {
+    display: flex;
+    justify-content: flex-start;
+}
