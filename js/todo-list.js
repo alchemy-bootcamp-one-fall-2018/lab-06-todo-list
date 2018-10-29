@@ -6,18 +6,24 @@ import store from './todo-api.js';
 
 console.log(store.a);
 
+let item = '';
+const taskList = document.getElementById('task-list');
+
+function display(){
+    for(let i = 0; i < store.data.length; i++) {
+        item += '<li>Task: ' + store.data[i].task + 'Due Date: ' + store.data[i].date + '</li>';
+    }
+
+    taskList.innerHTML = item;
+    item = '';
+}
+
+display();
+    
 const todoList = {
-
     init(todo) {
-        const taskList = document.getElementById('task-list');
-        let item = '';
-
-        
         store.init(todo);
-        for(let i = 0; i < store.data.length; i++){
-            item += '<li>Task: ' + store.data[i].task + '</li>';
-        }
-        taskList.innerHTML = item;
+        display();
         console.log('data: ', store.data);
     }
 
