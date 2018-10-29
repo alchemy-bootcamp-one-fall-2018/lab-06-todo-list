@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>TO-DO List</title>
 </head>
 <body>
-    
+        <header>
+            <h1>TO-DO</h1>
+        </header>
+        
+        <main>
+            <section id="add-task">
+                <h2>Add Task</h2>
+                <form id="add-task">
+                    <label>
+                        Task:
+                        <input name="task">
+                    </label>
+                    <label>
+                        Due Date:
+                        <input name="due-date">
+                    </label>
+                    <label>
+                        <button>Add task</button>
+                    </label>
+
+                </form>
+            </section>
+
+            <section>
+                <h2>Tasks</h2>
+                <ul id="task-list"></ul>
+            </section>
+        </main>
+        <script type="module" src="js/app.js"></script>
 </body>
 </html>
