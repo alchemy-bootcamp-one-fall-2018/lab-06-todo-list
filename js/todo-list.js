@@ -4,7 +4,7 @@ function makeTodo(tasks) {
     const html = /*html*/ `
     <li class="task-item">
         <p class="task">${tasks.task}</p>
-        <p>${tasks.date.toLocaleDateString()}</p>
+        <p class=${new Date(tasks.date) > Date.now() ? 'date' : 'late'}>${tasks.date.toLocaleDateString()}</p>
         <button class="danger">X</button>
     </li>
 `;
@@ -27,16 +27,14 @@ const taskList = {
             taskList.onRemove(task);
             listItem.remove();
         });
-
         list.appendChild(dom);
-
     },
     init(tasks, onRemove) {
         for(let i = 0; i < tasks.length; i++){
             taskList.add(tasks[i]);
         }
         taskList.onRemove = onRemove;
-    }
+    }   
 };
 
 export default taskList;
