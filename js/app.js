@@ -12,38 +12,45 @@
 const form = document.getElementById('create-task');
 const el = form.elements;
 
-console.log('data initial', localStorage.getItem('todo'));
-form.addEventListener('submit', function(event){
-    event.preventDefault();
-    
-    var data = JSON.parse(localStorage.getItem('todo'));
-    console.log('data initial:', data);
 
-    var item = {
-        task: el.task.value,
-        date: new Date(el.dueDate.value),
-        complete: false
-    };
+console.log(localStorage.getItem('todo'));
+if(localStorage.getItem('todo')){
 
-    item = JSON.stringify(item);
-
-    if(data) {
-        data += ',' + item;
+    form.addEventListener('submit', function(event){
+        event.preventDefault();
         
-    } else {
-        data = item;
-    }
-
-    data = JSON.stringify(data);
+        // var data = JSON.parse(localStorage.getItem('todo'));
+        // console.log('data initial:', data);
+        // console.log(data[0]);
     
-    // for(let i = 0; i < data.length; i++) {
-        //     console.log('loop:', data[i]);
+        var data = JSON.parse(localStorage.getItem('todo'));
+        
+        var item = {
+            task: el.task.value,
+            date: new Date(el.dueDate.value),
+            complete: false
+        };
+    
+        data.push(item);
+        localStorage.setItem('todo', JSON.stringify(data));
+        console.log(localStorage.getItem('todo'));
+        
+        // item = JSON.stringify(item);
+        
+        // if(data) {
+        //     data += ',' + item;
+            
+        // } else {
+        //     data = item;
         // }
         
-    localStorage.setItem('todo', data);
-    console.log('data final', data);
-});
-
-var a = '{ "name":"John", "age":30, "city":"New York"}';
-var b = JSON.parse(a);
-console.log(b);
+        // localStorage.setItem('todo', JSON.stringify(data));
+    
+        // console.log('data final:', localStorage.getItem('todo'));
+        // for(let i = 0; i < data.length; i++) {
+        //     console.log('loop:', data[i]);
+        // }
+    });
+} else {
+    localStorage.setItem('todo', JSON.stringify([]));
+}
