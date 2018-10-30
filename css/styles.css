@@ -1,0 +1,18 @@
+* {
+    margin: auto;
+    margin-top: 3%;
+}
+
+body {
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
+    padding: 2%;
+    color: rgb(63, 31, 31);
+    text-align: center;
+    border: 2px solid red;
+}
+
+@media screen and (min-width: 1024px) {
+    body {
+        margin-top: 0;
+    }
+}
