@@ -1,30 +1,37 @@
 'use strict';
 
-//Displays todo list on DOM
-
 import store from './todo-api.js';
 
-console.log(store.a);
-
-let item = '';
 const taskList = document.getElementById('task-list');
 
 function display(){
+    let item = '';
+    var today = new Date();
+    var due = '';
+
     for(let i = 0; i < store.data.length; i++) {
-        item += '<li>Task: ' + store.data[i].task + 'Due Date: ' + store.data[i].date + '</li>';
+        // var tempMonth = store.data[i].month;
+        // var tempDay = store.data[i].day;
+        // var tempYear = store.data[i].year;
+        // console.log('temps', tempMonth, tempDay, tempYear);
+        item += '<li>' + store.data[i].task + '</li>';
+        console.log('date: ', store.data[i].date);
     }
 
     taskList.innerHTML = item;
-    item = '';
 }
 
-display();
+if(store.data){
+    display();
+}
     
 const todoList = {
     init(todo) {
-        store.init(todo);
-        display();
-        console.log('data: ', store.data);
+        if(store.data){
+            store.init(todo);
+            display();
+            console.log('data: ', store.data);
+        }
     }
 
 };
