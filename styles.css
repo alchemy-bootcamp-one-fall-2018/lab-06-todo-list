@@ -1,10 +1,11 @@
+
 body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 main {
     margin: 10px;
@@ -23,6 +24,12 @@ header {
     justify-content: flex-start;
 }
 
+.label {
+    display: block;
+    text-transform: uppercase;
+    margin: 5px 0px 5px 0px;
+}
+
 section {
     font-family: sans-serif;
     display: flex;
@@ -32,18 +39,12 @@ section {
     margin: 10px;
 }
 
-.label {
-    text-transform: uppercase;
-}
-
 #class-list {
     border: 1px solid black;
     padding: 0px 10px 0px 10px;
 }
-
-@media (min-width:800px){
-    #todo {
-        display: flex;
-        flex-direction: row;
+@media (min-width:500px){
+    .label {
+        display: initial;
     }
 }
