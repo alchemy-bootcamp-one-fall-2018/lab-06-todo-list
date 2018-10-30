@@ -4,17 +4,16 @@
 
 function makeTask(task) {
     const html = /*html*/`
-        <li class="tasks">
+        <li class="createTasks">
             <p> 
                 ${task.item}
             </p>
             <p>
                 ${task.date}
             </p>
-            <button class="remove">X</button>
+            <button class="remove">Delete Task</button>
         </li>
         `; 
-    
 
 
         // command to create html to be placed in the template into the HTML doc
@@ -49,9 +48,19 @@ const taskList = {
         });
 
         list.appendChild(dom);
+
+
+        var getId = document.getElementByClassName('createTasks');
+        var currentDate = new Date();
+        var dueDateStuff = new Date(task.date);
+        for(var i = 0; i < getId.length; i++) {
+            if(getId !== null && dueDateStuff < currentDate) {
+                getId[i].classList.add('past-Due');
+            }
+
+        }
+        
     }
 };
-
-
 
 export default taskList;
