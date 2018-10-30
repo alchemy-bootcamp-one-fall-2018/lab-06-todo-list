@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/add-todo.css">
+    <link rel="stylesheet" href="css/todo-list.css">
 </head>
 <body>
     <header>
@@ -15,24 +17,27 @@
         
     <section id="add-task">
         <form id="add-form">
-            <label> Task: 
-                <input type="text" id="taskInput">
-            </label>
-
-            <label> Due date:
-                <input type="date" id='dueDate'>
-            </label>
-
-            <label>
-                <button type="action"> Add task</button>
-            </label>
+            <div>
+                <label> Task: 
+                    <input type="text" id="taskInput">
+                </label>
+            </div>
+            <div>
+                <label> Due date:
+                    <input type="date" id='dueDate'>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <button type="action"> Add task</button>
+                </label>
+            </div>
         </form>
     </section>
 
     <section id="task-list">
-        <h2>Stuff</h2>
+        <h2>To do Items</h2>
         <ul>
-            <li> Task: Stuff------- update</li>
         </ul>
     </section>
 

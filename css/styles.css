@@ -1,0 +1,32 @@
+body {
+
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.past-Due {
+
+    background-color: red;
+}
+
+button {
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-weight: bold;
+        color:lightcoral;
+        background-color: black;
+    
+}
+@media (max-width: 500px){
+
+body { 
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+}

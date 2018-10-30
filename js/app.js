@@ -10,9 +10,6 @@ taskList.init(tasks, function(task) {
 });
 
 
-
-
-
 addToDo.init(function(task){
 
     tasksApi.add(task);
