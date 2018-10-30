@@ -12,18 +12,13 @@
 const form = document.getElementById('create-task');
 const el = form.elements;
 
-
-console.log(localStorage.getItem('todo'));
 if(localStorage.getItem('todo')){
 
     form.addEventListener('submit', function(event){
         event.preventDefault();
-        
-        // var data = JSON.parse(localStorage.getItem('todo'));
-        // console.log('data initial:', data);
-        // console.log(data[0]);
     
         var data = JSON.parse(localStorage.getItem('todo'));
+        console.log('data', data);
         
         var item = {
             task: el.task.value,
@@ -34,22 +29,11 @@ if(localStorage.getItem('todo')){
         data.push(item);
         localStorage.setItem('todo', JSON.stringify(data));
         console.log(localStorage.getItem('todo'));
-        
-        // item = JSON.stringify(item);
-        
-        // if(data) {
-        //     data += ',' + item;
-            
-        // } else {
-        //     data = item;
-        // }
-        
-        // localStorage.setItem('todo', JSON.stringify(data));
-    
-        // console.log('data final:', localStorage.getItem('todo'));
-        // for(let i = 0; i < data.length; i++) {
-        //     console.log('loop:', data[i]);
-        // }
+
+        for(let i = 0; i < data.length; i++){
+            console.log(data[i].task);
+        }
+
     });
 } else {
     localStorage.setItem('todo', JSON.stringify([]));
