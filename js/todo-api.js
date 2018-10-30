@@ -1,4 +1,4 @@
-let lists = [
+let tasks = [
     {
         task: 'wash dog',
         due: '10/30/18'
@@ -10,17 +10,28 @@ let lists = [
 ];
 
 function saveTasks() {
-    localStorage.setItem('lists', JSON.stringify(lists));
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-const tasksApi = {
+const taskApi = {
     getAll() {
-        const json = localStorage.getItem('lists');
+        const json = localStorage.getItem('tasks');
         if(json) {
-            lists = JSON.parse(json);
+            tasks = JSON.parse(json);
         }
-        return lists;
-    },                               //left out remove 
+        return tasks;
+    },                      
+    add(task) {
+        tasks.push(task);
+        saveTasks();
+    },
+    remove(task) {
+        const index = tasks.indexOf(task);
+        if(index !== -1) {
+            tasks.splice(index, 1);
+            saveTasks();
+        }
+    }
 };
 
-export default tasksApi;
+export default taskApi;
