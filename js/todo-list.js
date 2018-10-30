@@ -1,7 +1,8 @@
 function makeList(task) {
     const html = /*html*/`
-        <li class="taskTodo">
-            <h3>{$list.task}</h3>             //this part makes no sense to me
+        <li class="task">
+            <h3>{$task.chore}</h3>             //this part makes no sense to me
+            <button class="remove">X</button>
         </li>
     `;
 
@@ -11,16 +12,18 @@ function makeList(task) {
 }
 
 
-const list = document.getElementsByID('add-form');
+const list = document.getElementsByID('tasks');     //confused as to which id this is for.... ul id?
 
 const todoList = {
-    init(lists) {
-        for(let i = 0; i < lists.length; i++) {
-            todoList.add(lists[i]);
+    init(tasks, onRemove) {
+        for(let i = 0; i < tasks.length; i++) {
+            todoList.add(tasks[i]);
         }
     },
     add(task) {
         const dom = makeList(task);
+
+        const removeButton = dom.querySelector('button');
         const listItem = dom.querySelector('li');
     
         task.appendChild(dom);
