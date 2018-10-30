@@ -9,7 +9,7 @@ const addTodo = {
             event.preventDefault();
 
             const elements = form.elements;
-
+            
             const todo = {
                 task: elements.task.value,
                 date: elements.date.value
