@@ -104,7 +104,7 @@ const fruitList = {
         const listItem = dom.querySelector('li');
 
         removeButton.addEventListener('click', function() {
-            fruitList.onRemove(fruit);
+            fruitList.onRemove(fruit)
             listItem.remove();
         });
 
