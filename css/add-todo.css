@@ -1,0 +1,28 @@
+form {
+    border: 2px solid black;
+    padding: 2%;
+    background: rgb(214, 168, 214);
+    width: 50%;
+}
+
+fieldset {
+    border: none;
+    padding: 0;
+    /* border: 3px solid blue; */
+}
+
+label {
+    display: block;
+    padding: 2% 2% 2% 0;
+    /* border: 3px solid red; */
+}
+
+ul {
+    width: 30%;
+    text-align: left;
+}
+
+button {
+    padding: 1%;
+    background-color: aqua;
+}

@@ -1,40 +1,12 @@
+* {
+    margin: auto;
+    margin-top: 3%;
+}
+
 body {
+    font-family: Corbel, "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", "Bitstream Vera Sans", "Liberation Sans", Verdana, "Verdana Ref", sans-serif;
     padding: 2%;
-}
+    color: rgb(63, 31, 31);
 
-form {
-    border: 2px solid black;
-    padding: 2%;
-    background: rgb(214, 168, 214);
-    width: 50%;
-}
-
-fieldset {
-    border: none;
-    padding: 0;
-    /* border: 3px solid blue; */
-}
-
-label {
-    display: block;
-    padding: 2% 2% 2% 0;
-    /* border: 3px solid red; */
-}
-
-button {
-    margin: 2% 2% 0 0;
-    padding: 1%;
-    background-color: aqua;
-}
-
-.green {
-    color: green;
-}
-
-.red {
-    color: red;
-}
-
-.blue {
-    color: blue;
+    text-align: center;
 }
