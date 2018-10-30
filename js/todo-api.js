@@ -1,15 +1,15 @@
 let todos = [
     {
         task:'Meal Prep',
-        date:new Date('10/22/2018')
+        date:new Date('10/22/2018').toLocaleDateString()
     },
     {
         task:'Plan party',
-        date:new Date('10/20/2018')
+        date:new Date('10/20/2018').toLocaleDateString()
     },
     {
         task:'Pay bills',
-        date:new Date('10/30/2018')
+        date:new Date('10/30/2018').toLocaleDateString()
     },
 ];
 

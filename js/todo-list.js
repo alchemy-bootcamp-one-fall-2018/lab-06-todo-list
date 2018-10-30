@@ -1,10 +1,11 @@
 function makeTodo(todo) {
     const html = /*html*/`
         <li class="todo">
-            <h3 class="name" style="background: ${todo.task};">
-            ${todo.task}
+            <h3 class="todo ${todo.date} < Date.now()? 'overdue' : ''}">
             ${todo.date} 
             </h3>
+            <h3>${todo.task}</h3>
+            
             <button class="danger">Remove</button>
         </li>
         `;
