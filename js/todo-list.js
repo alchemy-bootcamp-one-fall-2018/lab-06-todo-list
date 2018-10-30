@@ -37,7 +37,6 @@ const toDoList = {
 
         list.appendChild(dom);
 
-        var aboutMeForm
     }
 };
 
