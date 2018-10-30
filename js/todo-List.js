@@ -4,7 +4,7 @@ function makeToDo(todo) {
             <h3 class="title">
                 ${todo.title}
             </h3>
-            <h4 class=${new Date(todo.date) > Date.now() ? "date" : "late"}> ${todo.date}</h4>
+            <h4 class=${new Date(todo.date) > Date.now() ? 'date' : 'late'}> ${todo.date}</h4>
             <button class="btn-remove">X</button>
         </li>
     `;
