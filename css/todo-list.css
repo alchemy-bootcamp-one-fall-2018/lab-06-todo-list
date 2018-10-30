@@ -1,0 +1,23 @@
+.overdue {
+    background: red;
+    border: 10px solid red;
+    border-radius: 5px;
+    display: inline;
+}
+#danger {
+    margin: 5px;
+    background: rgb(172, 2, 2);
+    color: white;
+    display: block;
+    margin-top: 25px;
+}
+.toDo {
+    background: darkgrey;
+    padding: 10px;
+    border-radius: 10px;    
+    margin: 5px;
+}
+.toDo:hover {
+    border: 5px solid grey;
+}
+

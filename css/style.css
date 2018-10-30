@@ -1,6 +1,9 @@
 h1 {
     text-align: center;
+    background: lightsteelblue;
+    border-radius: 5px;
+    border: 2px solid darkslategrey;
 }
-.overdue {
-    background-color: red;
+body {
+    background: lightgray;
 }
