@@ -1,22 +1,22 @@
 
-
 let todos = [
     {
         task: 'Finish lab',
-        due: [new Date('10/30/18')],
-        done: false
+        due: new Date('1/30/18'), //Date objects are created with the new Date() constructor
+        done: true
     },
     { 
         task: 'Bake cookies',
-        due: [new Date('10/29/18')],
-        done: false
+        due: new Date('10/29/18'),
+        done: true
     },
     { 
         task: 'Do laundry',
-        due: [new Date('10/30/18')],
+        due: new Date('10/30/18'),
         done: false
     }
 ];
+
 
 function saveTodos() {
     localStorage.setItem('todos', JSON.stringify(todos));

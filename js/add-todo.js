@@ -12,7 +12,7 @@ const addTodo = {
             const todo = {
                 task: elements.task.value,
                 due: elements.due.value,
-                done: elements.done.value
+                done: elements.done.value,
             };
 
             onAdd(todo);

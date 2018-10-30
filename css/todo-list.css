@@ -12,6 +12,15 @@ li.todo {
     border-bottom: 1px solid white;
 }
 
+input[type="checkbox"] {
+    margin: 0 auto;
+    zoom: 1.5;
+}
+
+.hidden {
+    display: none;
+}
+
 .todo .task {
     background-color: orange;
     margin: 0;
@@ -24,10 +33,13 @@ li.todo {
     margin-bottom: 5px;
 }
 
-h4 {
+.h4 {
+    color: blue;
+}
+
+.done-state {
     color: red;
-    background-color: slategray;
-    border: 2px solid red;
-    margin: 15px;
+    text-align: center;
     display: block;
+    font-size: 20px;
 }

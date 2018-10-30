@@ -12,13 +12,12 @@ h3 {
     text-decoration: underline;
 }
 input {
-    width: 10em;
     height: 2em;
 }
 
 form {
     display: flex;
-    align-items: left;
+    justify-content: center;
     box-sizing: border-box;
 }
 
@@ -29,14 +28,15 @@ label {
     margin-left: 1em;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 605px) {
     form {
+        display: flex;
+        width: 100%;
         flex-direction: column;
-        align-items: initial;
     }
 
     label {
         justify-content: space-between;
-        max-width: 20px;
+        max-width: 90%;
     }
 }
