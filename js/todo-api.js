@@ -6,7 +6,6 @@ const store = {
     
     init(item){
         store.data.push(item);
-        console.log('data after push', store.data);
         localStorage.setItem('todo', JSON.stringify(store.data));  
     },
 

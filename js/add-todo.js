@@ -7,7 +7,7 @@ const form = document.getElementById('create-task');
 const el = form.elements;
 const taskList = document.getElementById('task-list');
 
-console.log('data initial', store.data);
+// console.log('data initial', store.data);
 
 const addToDo = {
 
@@ -23,7 +23,6 @@ const addToDo = {
             form.addEventListener('submit', function(event){
                 
                 event.preventDefault();
-                console.log('clicked submit');
                 
                 const item = {
                     task: el.task.value,
@@ -40,8 +39,6 @@ const addToDo = {
                 } else {
                     item['classColor'] = 'red';
                 }
-
-
             
                 store.init(item);
     
