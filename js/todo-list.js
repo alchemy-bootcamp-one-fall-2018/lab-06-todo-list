@@ -26,13 +26,24 @@ const todoList = {
     // init
     // should include:
     // 1. initial todos array
-    init(todos) {
+    init(todos, onRemove) {
         for(let i = 0; i < todos.length; i++) {
             todoList.add(todos[i]);
         }
+        todoList.onRemove = onRemove;
     },
     add(todo) {
         const dom = makeTodo(todo);
+
+        // do work of finding elements _before_ appending
+        const removeButton = dom.querySelector('button');
+        const listItem = dom.querySelector('li');
+
+        removeButton.addEventListener('click', function() {
+            todoList.onRemove(todo);
+            listItem.remove();
+        });
+
       // append to <ul>, this will empty the fragment
         list.appendChild(dom);
     }

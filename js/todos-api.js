@@ -26,6 +26,13 @@ const todosApi = {
         todos.push(todo);
     // 2. save array to localStorage
         saveTodos();
+    },
+    remove(todo) {
+        const index = todos.indexOf(todo);
+        if(index !== -1) {
+            todos.splice(index, 1);
+            saveTodos();
+        }
     }
     
 };
