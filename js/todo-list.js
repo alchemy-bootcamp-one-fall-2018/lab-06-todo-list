@@ -14,15 +14,17 @@ function makeList(list) {
 const list = document.getElementsByID('add-form');
 
 const todoList = {
-    init(list) {
-        for(let i = 0; i < list.length; i++) {
-            todoList.add(list[i]);
+    init(lists) {
+        for(let i = 0; i < lists.length; i++) {
+            todoList.add(lists[i]);
         }
     },
-    add(list) {
-        const dom = makeList(list);
+    add(task) {
+        const dom = makeList(task);
         const listItem = dom.querySelector('li');
     
-        list.appendChild(dom);
+        task.appendChild(dom);
     },
 };
+
+export default todoList;

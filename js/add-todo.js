@@ -6,7 +6,7 @@ const addTodo = {
             const elements = form.elements;
             const task = {
                 task: elements.task.value,
-                duedate: new Date(elements.duedate.value)
+                duedate: new Date(elements.due.value)            //item 5 incomplete (compare date)
             };
             onAdd(task);
         
