@@ -9,7 +9,7 @@ function makeTask(tasks) {
 </li>
 `;
 
-const template - document.createElement('template');
+const template = document.createElement('template');
 
 template.innerHTML = html;
 
@@ -20,7 +20,7 @@ const tasklist = {
 init(tasks, onRemove) {
     for(let i=0; i < tasks.length; i++) {
         tasklist.onRemove = onRemove;
-    },
+    }
 add(tasks) {
     const dom = makeTask(tasks);
     const removeButton = dom.querySelector('button');
