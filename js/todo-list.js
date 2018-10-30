@@ -1,18 +1,17 @@
 // 'use strict';
 
-// import store from './todo-api.js';
+import store from './todo-api.js';
 
 const taskList = document.getElementById('task-list');
 
-var data = JSON.parse(localStorage.getItem('todo'));
 const display = {
 
     init() { 
         let li = '';
-        data = JSON.parse(localStorage.getItem('todo'));
+        store.data = JSON.parse(localStorage.getItem('todo'));
         
-        for(let i = 0; i < data.length; i++){
-            li += '<li class="' + data[i].classColor + '">' + data[i].task + '</li><button name="' + i + '">Remove</button>';
+        for(let i = 0; i < store.data.length; i++){
+            li += '<li class="' + store.data[i].classColor + '">' + store.data[i].task + '</li><button name="' + i + '">Remove</button>';
         }
         
         taskList.innerHTML = li;
@@ -20,8 +19,8 @@ const display = {
 
     remove: function(event) {
         let ind = event.target.name;
-        data.splice(ind, 1);
-        localStorage.setItem('todo', JSON.stringify(data));
+        store.data.splice(ind, 1);
+        localStorage.setItem('todo', JSON.stringify(store.data));
         display.init();
     }
 };

@@ -1,13 +1,13 @@
 // 'use strict';
 
 import display from './todo-list.js';
+import store from './todo-api.js';
 
 const form = document.getElementById('create-task');
 const el = form.elements;
 const taskList = document.getElementById('task-list');
-var data = JSON.parse(localStorage.getItem('todo'));
 
-console.log('data initial', data);
+console.log('data initial', store.data);
 
 var item = {};
 
@@ -41,10 +41,12 @@ const addToDo = {
                 } else {
                     item['classColor'] = 'red';
                 }
+
+
             
-                data.push(item);
-                console.log('data after push', data);
-                localStorage.setItem('todo', JSON.stringify(data));
+                store.data.push(item);
+                console.log('data after push', store.data);
+                localStorage.setItem('todo', JSON.stringify(store.data));
     
                 display.init();
                 
