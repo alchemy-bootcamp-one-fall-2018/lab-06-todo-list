@@ -14,6 +14,11 @@ const el = form.elements;
 const taskList = document.getElementById('task-list');
 
 var data = JSON.parse(localStorage.getItem('todo'));
+
+console.log('data initial', data);
+// data.splice(1, 1);
+// localStorage.setItem('todo', JSON.stringify(data));
+
 var item = {};
 
 function display(){ 
@@ -26,11 +31,12 @@ function display(){
     taskList.innerHTML = li;
 }
 
-// taskList.addEventListener('click', function(event) {
-    //     let ind = event.target;
-    //     console.log(data.splice());
-//     display();
-// });
+taskList.addEventListener('click', function(event) {
+    let ind = event.target.name;
+    data.splice(ind, 1);
+    localStorage.setItem('todo', JSON.stringify(data));
+    display();
+});
 
 if(localStorage.getItem('todo')){
 
