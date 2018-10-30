@@ -11,13 +11,29 @@
 
 const form = document.getElementById('create-task');
 const el = form.elements;
+const taskList = document.getElementById('task-list');
+
+var data = JSON.parse(localStorage.getItem('todo'));
+
+function display(){ 
+    let li = '';
+    
+    for(let i = 0; i < data.length; i++){
+        console.log(data[i].task);
+        li += '<li>' + data[i].task + '</li>';
+    }
+    
+    taskList.innerHTML = li;
+}
 
 if(localStorage.getItem('todo')){
 
+    display();
+
     form.addEventListener('submit', function(event){
+
         event.preventDefault();
     
-        var data = JSON.parse(localStorage.getItem('todo'));
         console.log('data', data);
         
         var item = {
@@ -30,9 +46,7 @@ if(localStorage.getItem('todo')){
         localStorage.setItem('todo', JSON.stringify(data));
         console.log(localStorage.getItem('todo'));
 
-        for(let i = 0; i < data.length; i++){
-            console.log(data[i].task);
-        }
+        display();
 
     });
 } else {
