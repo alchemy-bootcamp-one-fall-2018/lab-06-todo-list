@@ -8,8 +8,13 @@ const addToDo = {
                 task: elements.task.value,
                 due: new Date(elements.date.value),
                 
-            }
+            };
             onAdd(toDo);
-        }) 
+
+            form.reset();
+            document.activeElement.blur();
+        }); 
     }
-}
+};
+
+export default addToDo;
