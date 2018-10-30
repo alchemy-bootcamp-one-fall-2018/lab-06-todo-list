@@ -25,13 +25,13 @@ const todoApi = {
         return todo;
     },
     add(todo) {
-        todo.push(fruit);
+        todo.push(todo);
         saveTodo();
     },
     remove(todo) {
         const index = todo.indexOf(todo);
         if(index !== -1) {
-            fruits.splice(index, 1);
+            todo.splice(index, 1);
             saveTodo();
         }
     }
