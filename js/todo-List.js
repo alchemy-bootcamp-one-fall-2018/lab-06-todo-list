@@ -12,7 +12,6 @@ function makeToDo(todo) {
 
     template.innerHTML = html;
 
-    console.log(new Date(todo.date) < Date.now());
     return template.content;
 }
 

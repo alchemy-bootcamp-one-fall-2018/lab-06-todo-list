@@ -1,0 +1,16 @@
+ul {
+    list-style: none;
+}
+
+.to-do {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-remove {
+    color: #FE7F2D;
+}
+
+.late {
+    color: #FB3640;
+}
