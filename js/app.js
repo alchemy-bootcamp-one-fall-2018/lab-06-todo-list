@@ -1,3 +1,5 @@
-// put in strict line
+'use strict';
 
-import toDoItem from './add-todo.js';
+
+//import toDoItem from './add-todo.js';
+
