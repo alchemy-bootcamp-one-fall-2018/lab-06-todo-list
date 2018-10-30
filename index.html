@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo List Tracker</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+    <link rel="stylesheet" href="css/add-todo.css">
+</head>
+<body>
+    <header>
+        <img class="logo" src="assets/caripizza.png">
+        <h1>
+            Todo List
+        </h1>
+    </header>
+    <div id="add-todo">
+        <form id="add-todo-form">
+            <label>
+                Task:<br />
+                <input required maxlength="20" name="task"/>
+            </label>
+            <label>
+                Due:<br />
+                <input type="date" maxlength="8" required name="due"/>
+            </label>
+            <label>
+                <input type="checkbox" name="done" class="hidden" />
+            </label>
+            <p>
+                <button class="action">Add New</button> 
+            </p>
+        </form>
+        <hr />
+        <div>
+            <ul id="todos"></ul>
+        </div>
+    </div>
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
