@@ -2,7 +2,7 @@
 function makeTodo(todo) {
     const html = /*html*/`
       <li class="todo">
-          <h3 class="name" style="background: ${todo.task};">
+          <h3 class="name" >  ${todo.task}
               ${todo.dueDate}
           </h3>
       </li>
