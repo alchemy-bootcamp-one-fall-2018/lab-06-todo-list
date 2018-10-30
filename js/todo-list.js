@@ -34,6 +34,8 @@ const taskList = {
             taskList.onRemove(task);
             listItem.remove();
         });
+
+        list.appendChild(dom);
     }
 };
 
