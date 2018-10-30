@@ -3,12 +3,13 @@
 // import store from './todo-api.js';
 
 const taskList = document.getElementById('task-list');
-var data = JSON.parse(localStorage.getItem('todo'));
 
+var data = JSON.parse(localStorage.getItem('todo'));
 const display = {
 
     init() { 
         let li = '';
+        data = JSON.parse(localStorage.getItem('todo'));
         
         for(let i = 0; i < data.length; i++){
             li += '<li class="' + data[i].classColor + '">' + data[i].task + '</li><button name="' + i + '">Remove</button>';
@@ -20,7 +21,6 @@ const display = {
     remove: function(event) {
         let ind = event.target.name;
         data.splice(ind, 1);
-        console.log('data after remove', data);
         localStorage.setItem('todo', JSON.stringify(data));
         display.init();
     }

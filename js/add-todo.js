@@ -17,8 +17,13 @@ const addToDo = {
         if(localStorage.getItem('todo')){
     
             display.init();
+
+            taskList.addEventListener('click', function(event) {
+                display.remove(event);
+            });
     
             form.addEventListener('submit', function(event){
+                
                 event.preventDefault();
                 
                 item = {
@@ -42,11 +47,7 @@ const addToDo = {
                 localStorage.setItem('todo', JSON.stringify(data));
     
                 display.init();
-
-                taskList.addEventListener('click', function(event) {
-                    display.remove(event);
-                });
-    
+                
             });
         } else {
             localStorage.setItem('todo', JSON.stringify([]));
