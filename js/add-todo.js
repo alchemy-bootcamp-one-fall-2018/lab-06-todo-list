@@ -1,32 +1,27 @@
-'use strict';
+// 'use strict';
 
-import todoList from './todo-list.js';
-import store from './todo-api.js';
+// import todoList from './todo-list.js';
 
-const addToDo = {
+// const addToDo = {
     
-    init(){      
-        const form = document.getElementById('create-task');
-        const el = form.elements;
-        form.addEventListener('submit', function(event){
-            event.preventDefault();
+//     init(){      
+//         const form = document.getElementById('create-task');
+//         const el = form.elements;
+//         form.addEventListener('submit', function(event){
+//             event.preventDefault();
             
-            const todo = {
-                task: el.task.value,
-                date: new Date(el.dueDate.value),
-                // day: this.date.getDate(),
-                // month: this.date.getMonth(),
-                // year: this.date.getFullYear(),
-                complete: false
-            };
-            console.log(Date.now());
+//             const todo = {
+//                 task: el.task.value,
+//                 date: new Date(el.dueDate.value),
+//                 complete: false
+//             };
+//             console.log('todo: ', todo);
 
-            todoList.init(todo);
-            console.log('date at creation: ', todo.date);
-        });
+//             todoList.init(todo);
+//         });
 
-    }
-};
+//     }
+// };
 
 
-export default addToDo;
+// export default addToDo;

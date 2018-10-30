@@ -1,15 +1,15 @@
-'use strict';
+// 'use strict';
 
-const store = {
+// const store = {
 
-    data: JSON.parse(localStorage.getItem('todo')),
+//     data: JSON.parse(localStorage.getItem('todo')),
     
-    init(todo){
-        this.data.push(todo);
+//     init(todo){
+//         this.data.push(todo);
         
-        localStorage.setItem('todo', JSON.stringify(this.data));
-    },
+//         localStorage.setItem('todo', JSON.stringify(this.data));
+//     },
 
-};
+// };
 
-export default store;
+// export default store;
