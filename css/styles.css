@@ -15,18 +15,6 @@ body {
     border: 1px solid white;
 }
 
-.caution {
-    background: #EFEB3E;
-    color: black;
-    border: 1px solid black;
-}
-
-.danger {
-    background: #EB4D5C;
-    color: white;
-    border: 1px solid white;
-}
-
 header {
     background: black;
     color: white;
@@ -35,10 +23,6 @@ header {
     align-items: center;
 }
 
-.logo {
-    height: 75px;
-    margin-right: 15px;
-} 
 
 header, section {
     padding: 10px 20px;

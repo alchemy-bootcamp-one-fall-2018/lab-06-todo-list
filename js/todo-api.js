@@ -1,17 +1,17 @@
 let wholeList = [
     {
         task: 'lab-06',
-        date: new date ('10/30/2018'),
+        date: new Date('10/30/2018'),
         done: true
     },
     {
         task: 'dishes',
-        date: new date ('10/30/2018'),
+        date: new Date('10/30/2018'),
         done: false
-    }
+    },
     {
         task: 'work-out',
-        date: new date ('10/30/2018'),
+        date: new Date('10/30/2018'),
         done: false
     }
 
@@ -29,17 +29,17 @@ const tasksApi = {
             wholeList = JSON.parse(json);
         }
         return wholeList;
-    }
-};
-add(task) {
-    wholeList.push(task);
-    saveTasks();
-};
-remove(task) {
-    const index = wholeList.indexOf(task);
-    if(index !== -1) {
-        wholeList.splice(index, 1);
-        saveTasks;
+    },
+    add(task) {
+        wholeList.push(task);
+        saveTasks();
+    },
+    remove(task) {
+        const index = wholeList.indexOf(task);
+        if(index !== -1) {
+            wholeList.splice(index, 1);
+            saveTasks();
+        }
     }
 };
 
