@@ -1,16 +1,16 @@
 //import code here
 import addTodo from 'js./add-todo.js';
 import todoList from 'js.todo-list.js';
-import tasksApi from 'js.todo-api.js';
+import taskApi from 'js.todo-api.js';
 //import addFruit from './add-fruit.js';
 
-const lists = tasksApi.getAll();
+const tasks = taskApi.getAll();
 
-//todoList.init(lists) {
-//}                                //left out event handler
-
+todoList.init(tasks, function(task) {      
+    taskApi.remove(task);//onRemove listener
+});
 
 addTodo.init(function(task) {            //onAdd Listener
-    tasksApi.add(task);                     //tell the Api first
+    taskApi.add(task);                     //tell the Api first
     todoList.add(task);                  //update the components
 });

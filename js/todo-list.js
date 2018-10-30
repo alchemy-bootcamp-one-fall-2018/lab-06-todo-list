@@ -1,4 +1,4 @@
-function makeList(list) {
+function makeList(task) {
     const html = /*html*/`
         <li class="taskTodo">
             <h3>{$list.task}</h3>             //this part makes no sense to me
