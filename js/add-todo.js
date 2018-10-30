@@ -6,7 +6,7 @@ const addToDo = {
         
         form.addEventListener('submit', function(event) {
             event.preventDefault();
-            console.log('EventListener');
+            
             const elements = form.elements;
             const toDo = {
                 task: elements.task.value,

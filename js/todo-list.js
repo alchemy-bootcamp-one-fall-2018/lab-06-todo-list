@@ -3,6 +3,8 @@ function makeToDo(toDo) {
         <li class="toDo">
             <h3 class="name">
                 ${toDo.task}
+            </h3>
+            <h3 class=${new Date(toDo.due) > Date.now() ? 'date' : 'overdue'}>
                 ${toDo.due}
             </h3>
             <button class="danger">X</button>
