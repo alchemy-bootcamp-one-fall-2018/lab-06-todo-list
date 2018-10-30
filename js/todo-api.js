@@ -1,5 +1,5 @@
 
-let todos = [
+let todo = [
     {
         task: 'lab-6',
         due: new Date('October 30, 2018'),
@@ -12,29 +12,29 @@ let todos = [
     }
 ];
 
-function saveTodos() {
-    localStorage.setItem('todos', JSON.stringify(todos));
+function saveTodo() {
+    localStorage.setItem('todo', JSON.stringify(todo));
 }
 
-const todosApi = {
+const todoApi = {
     getAll() {
-        const json = localStorage.getItem('todos');
+        const json = localStorage.getItem('todo');
         if(json) {
-            todos = JSON.parse(json);
+            todo = JSON.parse(json);
         }
-        return todos;
+        return todo;
     },
-    // add(todo) {
-    //     todos.push(fruit);
-    //     saveTodos();
-    // },
-    // remove(todo) {
-    //     const index = todos.indexOf(todo);
-    //     if(index !== -1) {
-    //         fruits.splice(index, 1);
-    //         saveTodos();
-    //     }
+    add(todo) {
+        todo.push(fruit);
+        saveTodo();
+    },
+    remove(todo) {
+        const index = todo.indexOf(todo);
+        if(index !== -1) {
+            fruits.splice(index, 1);
+            saveTodo();
+        }
     }
 };
 
-export default todosApi;
+export default todoApi;

@@ -1,12 +1,11 @@
-/* exported todos */
 
 import addTodo from './add-todo.js';
-import todosApi from './todo-api.js';
+import todoApi from './todo-api.js';
 
-const todos = todosApi.getAll();
+const todo = todoApi.getAll();
 
 // eslint-disable-next-line no-console
-console.log(todos);
+console.log(todo);
 
  
 addTodo.init();
