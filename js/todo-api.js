@@ -1,24 +1,25 @@
 
-
 let todos = [
     {
         task: 'Finish lab',
-        due: new Date('10/30/2018'),
+        due: [new Date('10/30/18')],
         done: false
     },
     { 
         task: 'Bake cookies',
-        due: new Date('10/29/2018'),
+        due: [new Date('10/29/18')],
         done: false
     },
     { 
         task: 'Do laundry',
-        due: new Date('10/30/2018'),
+        due: [new Date('10/30/18')],
         done: false
     }
 ];
 
-
+function saveTodos() {
+    localStorage.setItem('todos', JSON.stringify(todos));
+}
 
 // get all of the above todos
 const todoApi = {
@@ -42,6 +43,7 @@ const todoApi = {
             saveTodos();
         }
     }
+
 };
 
 export default todoApi;

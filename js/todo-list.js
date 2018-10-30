@@ -1,20 +1,20 @@
 
-
+// ${todo.done ? 'Complete' : 'Incomplete'} 
+//   ^ ^ if todo.done is True, type Complete otherwise Incomplete
 function makeTodo(todo) {
+    console.log('hiiiiiii', todo.done);
     const html = /*html*/`
         <li class="todo">
-            <h3 class="name" style="background: ${todo.color};">
-                ${todo.name}
+            <h3 class="name">
+                ${todo.due} ${todo.task}
             </h3>
-            <img src="assets/${todo.image ? todo.image : 'caripizza.png'}">
+            <p>${todo.done === true ? 'Complete' : 'Incomplete'}</p>
             <button class="danger"> Remove </button>
         </li>
     `;
 
-    // template element to convert string to DOM
     const template = document.createElement('template');
 
-    // B. Assign innerHTML property
     template.innerHTML = html;
     return template.content;
 }
@@ -40,7 +40,6 @@ const todoList = {
             listItem.remove();
         });
 
-        // append to <ul>, this will empty the fragment
         list.appendChild(dom);
     }
 };
