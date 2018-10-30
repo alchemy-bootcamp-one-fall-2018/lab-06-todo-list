@@ -2,12 +2,13 @@
 function makeTodo(todo) {
     const html = /*html*/`
       <li class="todo">
-          <h3 class="name" >  ${todo.task}
+          <h4 class="name" >  ${todo.task}
               ${todo.dueDate}
-          </h3>
-      </li>
-  `;
-
+              </h4>
+              <button class="remove">Remove</button>
+          </li>
+          `;
+          
   // A. Create template element to convert string to DOM
     const template = document.createElement('template');
 
