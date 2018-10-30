@@ -7,7 +7,6 @@ const addToDo = {
             event.preventDefault();
 
             const elements = form.elements;
-            console.log(elements.date.value);
 
             const todo = {
                 title: elements.title.value,

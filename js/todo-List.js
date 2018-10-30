@@ -4,15 +4,15 @@ function makeToDo(todo) {
             <h3 class="title">
                 ${todo.title}
             </h3>
-            <h4 class="date"> ${todo.date}</h4>
-            <button class="danger">X</button>
+            <h4 class=${new Date(todo.date) > Date.now() ? "date" : "late"}> ${todo.date}</h4>
+            <button class="btn-remove">X</button>
         </li>
     `;
-
     const template = document.createElement('template');
 
     template.innerHTML = html;
 
+    console.log(new Date(todo.date) < Date.now());
     return template.content;
 }
 
