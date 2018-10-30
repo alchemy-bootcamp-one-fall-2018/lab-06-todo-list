@@ -1,8 +1,5 @@
 
 const addItem = {
-    // "init" method for initializing the component
-    // 1. passed data or callback functions
-    // 2. setup some event listeners
 
     init(addItem) {
         const form = document.getElementById('add-form'); 
@@ -11,9 +8,7 @@ const addItem = {
 
             
             event.preventDefault();
-            
-            console.log("hey"); 
-        
+
     
             const elements = form.elements;
 

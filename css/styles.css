@@ -9,23 +9,24 @@ h1 {
 main {
     font-family: 'Muli', sans-serif;
     margin: 0;
+    background-color:lightgrey; 
 
 }
 
 .action {
-    background: #39499B;
-    color: white;
+    background:#fcfaf1;
+    text-emphasis: bold;
     border: 1px solid white;
 }
 
 .remove {
-    background: #EFEB3E;
+    background: white;
     color: black;
-    border: 1px solid black;
+    border: 3px solid black;
 }
 
 header {
-    background: black;
+    background-color:#343434; 
     color: white;
     display: flex;
     justify-content: flex-start;
