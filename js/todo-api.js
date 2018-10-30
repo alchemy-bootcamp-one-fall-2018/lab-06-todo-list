@@ -13,5 +13,29 @@ let tasks = [
     }
 ];
 
+function saveTasks() {
+    localStorage.setItem('tasks', JSON.stringify(tasks));
+}
+
+const todoApi = {
+    getAll() {
+        const json = localStorage.getItem('tasks');
+        if(json) {
+            tasks = JSON.parse(json);
+        }
+        return tasks;
+    },
+    add(task) {
+        tasks.push(task);
+        saveTasks();
+    },
+    remove(tasks) {
+        if(index !== -1) {
+            tasks.splice(index, 1);
+            saveTasks();
+        }
+    }
+};
 
 
+export default todoApi;
