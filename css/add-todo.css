@@ -1,0 +1,24 @@
+#add-form {
+    background: lightsteelblue;
+    padding: 20px;
+    border-radius: 5px;
+}
+#task {
+    background: slategray;
+    color: White;
+    padding: 10px;
+    border-radius: 5px;
+}
+#due {
+    background: slategray;
+    color: White;
+    padding: 10px;
+    margin-left: 50px;
+    border-radius: 5px;
+}
+#addButton {
+    margin-left: 50px;
+    background: slategray;
+    padding: 5px;
+    border-radius: 5px;
+}
