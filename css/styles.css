@@ -14,9 +14,16 @@ body {
     border: 1px solid white;
 }
 
+.taskItem{
+    border: 1px solid #3D4C4A;
 
+}
+
+ul{
+   list-style: none; 
+}
 header {
-    background: black;
+    background: #DDAABB;
     color: white;
     display: flex;
     justify-content: flex-start;
