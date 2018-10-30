@@ -5,7 +5,7 @@ const addTask = {
         form.addEventListener('submit', function(event) {
             
             event.preventDefault();
-            console.log('eventListener working');
+            // console.log('eventListener working');
             
             
             const elements = form.elements;

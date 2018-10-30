@@ -12,5 +12,21 @@ function makeTask(task) {
     
     return template.content;
 }
-const list = document.getElementById('task-list');
+const taskList = document.getElementById('task-list');
+    IntersectionObserver(tasks, onRemove) {
+        for(let i = 0; i < tasks.length; i++) {
+            taskList.add(tasks[i]);
+        }
+        taskList.onRemove = onRemove;
+    };
+    add(task) {
+        const dom = makeTask(task);
+
+        const removeButton = dom.querySelector('button');
+        const listItem = dom.querySelector('li');
+
+        list.appendChild(dom);
+    };
+
+    export default taskList;
 
