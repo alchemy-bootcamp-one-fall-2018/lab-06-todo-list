@@ -14,7 +14,7 @@ const addTask = {
                 task: elements.task.value,
                 due: elements.due.value
             };
-            onAdd(task);
+            // onAdd(task);
 
             form.reset();
             document.activeElement.blur();

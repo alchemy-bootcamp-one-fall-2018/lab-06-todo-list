@@ -9,3 +9,7 @@ let tasks = [
     }
 
 ];
+
+function saveTasks() {
+    localStorage.setItem('tasks' , JSON.stringify(tasks));
+}
