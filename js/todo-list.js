@@ -1,13 +1,13 @@
 function makeToDo(toDo) {
     const html = /*html*/`
         <li class="toDo">
-            <h3 class="name">
+            <h3 class="name" id="danger-name">
                 ${toDo.task}
             </h3>
             <h3 class=${new Date(toDo.due) > Date.now() ? 'date' : 'overdue'}>
                 ${toDo.due}
             </h3>
-            <button class="danger">X</button>
+            <button class="danger" id="danger">Delete</button>
         </li>
     `;
 
