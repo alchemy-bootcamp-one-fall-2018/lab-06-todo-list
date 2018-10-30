@@ -1,41 +1,42 @@
-let task = [
-    {
-        name: 'Apple',
-        color: 'red',
-        image: 'apple.png'
-    },
-    {
-        name: 'Banana',
-        color: 'yellow',
-        image: 'banana.png'
-    }
-];
 
-function saveFruits() {
-    localStorage.setItem('fruits', JSON.stringify(fruits));
+//let task = [
+    //{
+  //      name: 'Apple',
+      //  color: 'red',
+        //image: 'apple.png'
+    //},
+    //{
+      //  name: 'Banana',
+        //color: 'yellow',
+        //image: 'banana.png'
+    //}
+//];
+
+function saveToDo() {
+    localStorage.setItem('todo', JSON.stringify(toDo));
 }
 
-const fruitsApi = {
+const toDoApi = {
     getAll() {
-        const json = localStorage.getItem('fruits');
+        const json = localStorage.getItem('toDo');
         if(json) {
-            fruits = JSON.parse(json);
+            toDo = JSON.parse(json);
         }
-        return fruits;
+        return toDo;
     },
-    add(fruit) {
+    add(toDo) {
         // 1. add to our array
-        fruits.push(fruit);
+        toDo.push(toDo);
         // 2. save array to localStorage
-        saveFruits();
+        saveToDo();
     },
-    remove(fruit) {
-        const index = fruits.indexOf(fruit);
+    remove(toDo) {
+        const index = toDo.indexOf(toDo);
         if(index !== -1) {
-            fruits.splice(index, 1);
-            saveFruits();
+            toDo.splice(index, 1);
+            saveToDo();
         }
     }
 };
 
-export default fruitsApi;
+export default toDoApi;

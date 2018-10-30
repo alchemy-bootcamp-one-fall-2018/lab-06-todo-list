@@ -2,12 +2,11 @@ import addToDo from './add-todo.js';
 import toDoList from './todo-List.js';
 import toDoApi from './todo-api.js';
 
-const toDo = toDoApi.getAll();
+const toDo = toDoList.getAll();
 
-toDoList.init(toDo, function(toDo) {
+toDoList.init(toDo, function() {
     // this is the onRemove listener
-
-    toDoApi.remove(toDo);
+    toDoList.onRemove();
 });
 
 addToDo.init(function(toDo) {
