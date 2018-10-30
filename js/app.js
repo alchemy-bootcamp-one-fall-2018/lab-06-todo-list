@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import addTodo from './add-todo.js';
 import todoList from './todo-list.js';
 import todosApi from './todos-api.js';

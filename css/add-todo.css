@@ -7,15 +7,13 @@ form {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 5px 0px;
 }
 
 label {
     text-align: center;
     padding-bottom: 15px;
     font-weight: bold;
-    justify-content: center;
 }
 
 button {
@@ -25,6 +23,7 @@ button {
     background-color: rgb(144,238,144);
     border: 2px solid black;
     height: 20px;
+    margin: 3px;
 }
 
 input {
