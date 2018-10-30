@@ -15,7 +15,7 @@ function saveToDos() {
 
 
 function customParser(key, value) {
-    if(key !== 'date') return value;
+    if(key !== 'date') return value;//due?
     return new Date(value);
 }
 

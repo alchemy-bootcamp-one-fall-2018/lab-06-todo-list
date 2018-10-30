@@ -1,5 +1,9 @@
 function makeItem(toDo) {
-    const html = /*html*/`<li class="${toDo}">${toDo}</li>`;
+    const html = /*html*/`
+        <li class="toDoItem">
+            <h3 class="specificItem">
+                ${toDo.todo}
+            </li>`;
 
     // A. Create template element to convert string to DOM
     const template = document.createElement('template');

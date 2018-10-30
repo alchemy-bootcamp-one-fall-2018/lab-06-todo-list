@@ -17,18 +17,18 @@
         <form id="item-list">
             <label>
                 Item To Do:
-                <input required name="todo">
+                <input type="text" required name="todo">
             </label>
             <label>
                 Due Date:
                 <input type="date" required name="due">
             </label>
-            <button type="submit" name="submit">Submit</button>
+            <span onclick="addToDo()" id="submitInput"><button type="submit" name="submit">Submit</button></span>
         </form>
     </section>
     <section>
         <h2>To Do:</h2>
-        <ul id="listItems"></ul>
+        <ul id="listItems">listItems</ul>
     </section>
     <script type="module" src="/js/app.js"></script>
 </body>

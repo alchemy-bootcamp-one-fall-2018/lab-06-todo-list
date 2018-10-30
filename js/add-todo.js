@@ -1,4 +1,3 @@
-//need newDate() @line 24
 const addToDoItem = {
     // "init" method for initializing the component
     // 1. passed data or callback functions
