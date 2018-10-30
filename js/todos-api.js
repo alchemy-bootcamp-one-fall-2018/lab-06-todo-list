@@ -17,7 +17,7 @@ function saveTodos() {
 
 function customParser(key, value) {
     if(key !== 'date') return value;
-    return new Date(value).toLocaleDateString();
+    return new Date(value);
 }
 
 const todosApi = {

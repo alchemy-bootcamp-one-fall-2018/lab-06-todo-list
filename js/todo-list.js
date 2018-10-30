@@ -8,7 +8,7 @@ function makeTodo(todo) {
                 ${todo.task}
             </h3>
             <h4 class="date">
-                ${todo.date}
+                ${todo.date.toLocaleDateString()}
             </h4>
             <button class="danger">X</button>
         </li>
