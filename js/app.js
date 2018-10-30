@@ -8,7 +8,7 @@ todoList.init(tasks, function(task) {
     todoApi.onRemove(task);
 }
 
-addTask.init(function(todo) {
+addTask.init(function(task) {
     todoApi.add(task);
     todoList.add(task);
 });

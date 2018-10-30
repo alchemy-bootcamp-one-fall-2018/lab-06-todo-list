@@ -29,7 +29,8 @@ const todoApi = {
         tasks.push(task);
         saveTasks();
     },
-    remove(tasks) {
+    remove(task) {
+        const index = tasks.indexOf(task);
         if(index !== -1) {
             tasks.splice(index, 1);
             saveTasks();

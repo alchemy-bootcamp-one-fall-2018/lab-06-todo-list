@@ -1,17 +1,40 @@
 function makeTask(task) {
     const html = /*html*/`
         <li class="task">
-            <h3 class="type" style="background: ${task.due};">
-                ${task.name}
+            <h3 class="type" style="background: ${task.name};">
+                ${task.due}
             <h3>
             <button class="delete">X</button>
         </li>
     `;
+
+    const template = document.createElement('template');
+    template.innerHTML = html;
+
+    return template.content;
 }
 
-add(task) {
-    const dom = makeTask(task);
-    const removeButton = dom.querySelector('button');
-    const listItem = dom.querySelector('li');
-}
+const list = document.getElementById('tasks');
 
+const taskList = {
+    init(tasks, onRemove) {
+        for(let i = 0; i < tasks.length; i++) {
+            taskList.add(tasks[i]);
+        }
+        taskList.onRemove = onRemove;
+    },
+
+    add(task) {
+        const dom = makeTask(task);
+
+        const removeButton = dom.querySelector('button');
+        const listItem = dom.querySelector('li');
+
+        removeButton.addEventListener('click', function() {
+            taskList.onRemove(task);
+            listItem.remove();
+        });
+    }
+};
+
+export default todoList;

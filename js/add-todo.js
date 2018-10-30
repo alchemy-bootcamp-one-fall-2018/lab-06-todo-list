@@ -12,6 +12,9 @@ const addTodo = {
             };
         
             onAdd(task);
+
+            form.reset();
+            document.activeElement.blur();
         });
     }
 };
