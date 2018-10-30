@@ -8,6 +8,11 @@ h2 {
     text-align: center;
 }
 
+button {
+    background-color: #E5EBEA;
+    border: none;
+}
+
 body {
     background-color: #E5EBEA;
     color: #3A445D;

@@ -14,3 +14,11 @@ ul {
 .late {
     color: #FB3640;
 }
+
+@media (min-width: 700px) {
+    
+    #todo {
+        display: flex;
+        justify-content: space-around;
+    }
+}

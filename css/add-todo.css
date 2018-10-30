@@ -33,3 +33,14 @@ form {
     text-decoration: none;
     color: white;
 }
+
+@media (min-width: 700px) {
+
+    .to-do {
+        width: 60vw;
+    }
+
+    #to-do-form {
+        justify-content: center;
+    }
+}
