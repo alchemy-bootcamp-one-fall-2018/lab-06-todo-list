@@ -1,0 +1,52 @@
+
+function makeTodo(todo) {
+    const html = /*html*/`
+      <li class="todo">
+          <h4 class="name" >  ${todo.task}
+              ${todo.dueDate}
+              </h4>
+              <button class="remove">Remove</button>
+          </li>
+          `;
+          
+  // A. Create template element to convert string to DOM
+    const template = document.createElement('template');
+
+  // B. Assign innerHTML property
+    template.innerHTML = html;
+
+  // C. Return the `content` property which is the dom
+  // (In a DocumentFragment)
+    return template.content;
+}
+
+const list = document.getElementById('todos');
+
+const todoList = {
+    // init
+    // should include:
+    // 1. initial todos array
+    init(todos, onRemove) {
+        for(let i = 0; i < todos.length; i++) {
+            todoList.add(todos[i]);
+        }
+        todoList.onRemove = onRemove;
+    },
+    add(todo) {
+        const dom = makeTodo(todo);
+
+        // do work of finding elements _before_ appending
+        const removeButton = dom.querySelector('button');
+        const listItem = dom.querySelector('li');
+
+        removeButton.addEventListener('click', function() {
+            todoList.onRemove(todo);
+            listItem.remove();
+        });
+
+      // append to <ul>, this will empty the fragment
+        list.appendChild(dom);
+    }
+};
+
+export default todoList;
