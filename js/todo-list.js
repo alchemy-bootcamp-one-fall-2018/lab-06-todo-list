@@ -1,14 +1,28 @@
 
+function checkIfDue() {
+    var givenDate = '2018-10-22';
+    var currentDate = new Date();
+    givenDate = new Date(givenDate);
+
+    if(givenDate > currentDate){
+        alert(' ✓ ');
+    }
+    else{
+        alert(' x ');
+    }
+}
+
+
 // ${todo.done ? 'Complete' : 'Incomplete'} 
 //   ^ ^ if todo.done is True, type Complete otherwise Incomplete
 function makeTodo(todo) {
     console.log('hiiiiiii', todo.done);
+
     const html = /*html*/`
         <li class="todo">
-            <h3 class="name">
-                ${todo.due} ${todo.task}
-            </h3>
-            <p>${todo.done === true ? 'Complete' : 'Incomplete'}</p>
+            <h3 class="name">${todo.task}<br /></h3>
+                ${todo.due}
+            <h4>${todo.done === true ? ' ✓ ' : ' x '}</h4>
             <button class="danger"> Remove </button>
         </li>
     `;

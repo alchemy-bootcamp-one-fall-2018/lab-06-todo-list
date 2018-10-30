@@ -1,20 +1,29 @@
 #add-todo {
     background-color: lightslategrey;
+    padding: 25px;
 }
 
-h2 {
-    font-style: italic;
+h6 {
+    color: magenta;
+}
+
+h3 {
     color: purple;
+    text-decoration: underline;
+}
+input {
+    width: 10em;
+    height: 2em;
 }
 
 form {
     display: flex;
     align-items: left;
-    justify-content: left;
-    border: 1px dashed red;
+    box-sizing: border-box;
 }
 
 label {
+    font-weight: bolder; 
     margin: 0 10px 10px 0;
     align-items: right;
     margin-left: 1em;
@@ -28,6 +37,6 @@ label {
 
     label {
         justify-content: space-between;
-        max-width: 200px;
+        max-width: 20px;
     }
 }

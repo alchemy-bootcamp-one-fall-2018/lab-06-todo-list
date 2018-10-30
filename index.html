@@ -17,28 +17,27 @@
         </h1>
     </header>
     <div id="add-todo">
-        <h2>Add a todo</h2>
         <form id="add-todo-form">
             <label>
-                Task:
-                <input required name="task"/>
+                Task:<br />
+                <input required maxlength="20" name="task"/>
             </label>
             <label>
-                Due:
-                <input type="date" required name="due"/>
+                Due:<br />
+                <input type="date" maxlength="8" required name="due"/>
             </label>
             <label>
-                Done:
+                Done:<br />
                 <input type="checkbox" value="false" name="done"/>
             </label>
-            <label>
-                <button class="action">Add</button>
-            </label>
+            <p>
+                <button class="action">Add New</button> 
+            </p>
         </form>
-        <section>
-            <h2>Todos</h2>
+        <hr />
+        <div>
             <ul id="todos"></ul>
-        </section>
+        </div>
     </div>
     <script type="module" src="js/app.js"></script>
 </body>

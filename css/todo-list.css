@@ -1,19 +1,15 @@
-
-#todos {
+ul#todos {
     padding: 0;
-    margin: 0;
+    margin: 20;
 }
 
-
-.todo {
+li.todo {
+    width: 100%;
     display: inline-flex;
-    width: 200px;
-    height: 250px;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin: 5px;
-    border: 1px solid blue;;
+    border-bottom: 1px solid white;
 }
 
 .todo .task {
@@ -24,10 +20,14 @@
     text-align: center;
 }
 
-.todo img {
-    width: 50%;
-}
-
 .todo button {
     margin-bottom: 5px;
+}
+
+h4 {
+    color: red;
+    background-color: slategray;
+    border: 2px solid red;
+    margin: 15px;
+    display: block;
 }
