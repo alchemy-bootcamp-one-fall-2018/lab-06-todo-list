@@ -3,7 +3,10 @@ function makeList(item) {
     const html = `
         <li class ="to-do">
             <h3 class="item"> 
-                ${item.name} ${item.date} 
+                ${makeList.task}
+            </h3>
+            <h3 class=${new Date(makeList.due) > Date.now() ? 'date' : 'overdue'}> 
+            ${item.name} ${item.date} 
             </h3>
             <div><button class="remove">X</button></div>
         </li> 
