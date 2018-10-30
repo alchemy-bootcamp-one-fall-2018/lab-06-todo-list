@@ -16,8 +16,6 @@ const taskList = document.getElementById('task-list');
 var data = JSON.parse(localStorage.getItem('todo'));
 
 console.log('data initial', data);
-// data.splice(1, 1);
-// localStorage.setItem('todo', JSON.stringify(data));
 
 var item = {};
 
@@ -25,7 +23,7 @@ function display(){
     let li = '';
     
     for(let i = 0; i < data.length; i++){
-        li += '<li class="' + item.classColor + '">' + data[i].task + '</li><button name="' + i + '">Remove</button>';
+        li += '<li class="' + data[i].classColor + '">' + data[i].task + '</li><button name="' + i + '">Remove</button>';
     }
     
     taskList.innerHTML = li;
@@ -51,15 +49,17 @@ if(localStorage.getItem('todo')){
             complete: false
         };
 
-        let month = item.date.getMonth() + 1;
-        let day = item.date.getDate();
-        let year = item.date.getFullYear();
         let today = new Date();
-        let tMonth = today.getMonth() + 1;
-        let tDay = today.getDate();
-        let tYear = today.getFullYear();
+        // let month = item.date.getMonth() + 1;
+        // let day = item.date.getDate();
+        // let year = item.date.getFullYear();
+        // let tMonth = today.getMonth() + 1;
+        // let tDay = today.getDate();
+        // let tYear = today.getFullYear();
 
-        if(item.date >= today) {
+        if(item.complete === false && item.date >= today) {
+            item['classColor'] = 'blue';
+        } else if(item.complete){
             item['classColor'] = 'green';
         } else {
             item['classColor'] = 'red';
