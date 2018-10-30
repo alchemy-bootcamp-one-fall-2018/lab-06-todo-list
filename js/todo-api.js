@@ -1,11 +1,11 @@
 let items = [
     {
         name: 'Go Grocery Shopping', 
-        date: new Date('10/30/2018')
+        date: new Date(Date.UTC(10, 18, 19)).toLocaleDateString()
     },
     {
         name: 'Take the Dog for a Walk',
-        date: new Date('10/30/2018')
+        date: new Date(Date.UTC(10, 18, 8)).toLocaleDateString()
     }
 ]; 
 
