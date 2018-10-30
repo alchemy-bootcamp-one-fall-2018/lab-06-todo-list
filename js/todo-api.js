@@ -28,6 +28,13 @@ const todoApi = {
     add(todo) {
         todos.push(todo);
         saveTodos();
+    },
+    remove(todo) {
+        const index = todos.indexOf(todo);
+        if(index !== -1) {
+            todos.splice(index, 1);
+            saveTodos();
+        }
     }
 };
 

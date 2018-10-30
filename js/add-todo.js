@@ -11,6 +11,7 @@ const addTodo = {
                 name: elements.name.value,
                 date: elements.date.value,
             };
+            
             onAdd(todo);
         });
     }
