@@ -3,10 +3,6 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-/* * {
-    box-sizing: border-box;
-} */
-
 main {
     margin: 10px;
 }
@@ -43,6 +39,9 @@ section {
     .label {
         display: initial;
     }
+}
+
+@media (max-width: 500px){
     #class-list {
         border: 1px solid black;
         padding: 0px 10px 0px 10px;
