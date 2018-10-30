@@ -19,6 +19,8 @@ const addTodo = {
             };
 
             onAdd(todo);
+            form.reset();
+            document.activeElement.blur();
 
         });
     }
