@@ -8,10 +8,9 @@ const addTodo = {
             const elements = form.elements;
 
             const todo = {
-                name: elements.name.value,
+                task: elements.task.value,
                 date: elements.date.value,
             };
-            
             onAdd(todo);
         });
     }

@@ -2,10 +2,11 @@
     margin:0;
 }
 header {
-    padding: 60px;
-    margin:0;
+    padding: 30px;
+    margin:0px;
     text-align: center;
-    background:#B6B6B6;
+    background: lightgray;
+    opacity: 0.8;
 }
 h1 {
     font-family: sans-serif;
@@ -15,4 +16,12 @@ body {
     background-image:url("http://barnumstation.com/wp-content/uploads/2018/05/work-desk-background-awesome-royalty-free-desk-top-pictures-images-and-stock-photos-istock-of-work-desk-background.jpg");
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: sans-serif;
 }
+
+div {
+    margin: 10px;
+    display: block;
+    text-align:center;
+}
+

@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>To Do List</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/add-todo.css">
+    <link rel="stylesheet" href="css/todo-list.css">
 </head>
 <body>
     <header>
@@ -13,23 +15,33 @@
     </header>
     <main>
         <section id="add-todo">
-            <h2>Add a to-do</h2> 
+            <h2>Add to-do item</h2> 
             <form id="add-form">
+                <div>
                 <label>
                     Task:
-                    <input required name="name" type="text">
+                    <input required name="task" type="text">
                 </label>
+                </div>  
+
+                <div>
                 <label>
                     Date:
                     <input required name="date" type="date">
                 </label>
+                </div>
+
+                <div>
                 <label>
                 <button type="submit" class="action">Add</button>
                 </label>
+                </div>
+        
             </form>  
         </section>
-        <section>
-            <h2>Todos</h2>
+
+        <section id="items">
+            <h2>To-do items</h2>
             <ul id="todos"></ul>
         </section>
 
