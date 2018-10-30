@@ -11,7 +11,6 @@ function makeTask(task) {
             </li>
         `;
     
-        // A. Create template element to convert string to DOM
     const template = document.createElement('template');
     
         // B. Assign innerHTML property
@@ -29,8 +28,8 @@ const taskList = {
         // should include:
         // 1. initial task array
     init(task, onRemove) {
-        for(let i = 0; i < tasks.length; i++) {
-            taskList.add(tasks[i]);
+        for(let i = 0; i < task.length; i++) {
+            taskList.add(task[i]);
         }
         taskList.onRemove = onRemove;
     },
