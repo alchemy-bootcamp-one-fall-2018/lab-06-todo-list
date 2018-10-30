@@ -9,8 +9,6 @@ const taskList = document.getElementById('task-list');
 
 console.log('data initial', store.data);
 
-var item = {};
-
 const addToDo = {
 
     init() {
@@ -19,14 +17,15 @@ const addToDo = {
             display.init();
 
             taskList.addEventListener('click', function(event) {
-                display.remove(event);
+                display.removeDisplay(event);
             });
     
             form.addEventListener('submit', function(event){
                 
                 event.preventDefault();
+                console.log('clicked submit');
                 
-                item = {
+                const item = {
                     task: el.task.value,
                     date: new Date(el.dueDate.value),
                     complete: false
@@ -44,9 +43,7 @@ const addToDo = {
 
 
             
-                store.data.push(item);
-                console.log('data after push', store.data);
-                localStorage.setItem('todo', JSON.stringify(store.data));
+                store.init(item);
     
                 display.init();
                 

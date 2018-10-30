@@ -17,10 +17,8 @@ const display = {
         taskList.innerHTML = li;
     },
 
-    remove: function(event) {
-        let ind = event.target.name;
-        store.data.splice(ind, 1);
-        localStorage.setItem('todo', JSON.stringify(store.data));
+    removeDisplay: function(event) {
+        store.remove(event);
         display.init();
     }
 };
