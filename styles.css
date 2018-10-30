@@ -39,12 +39,12 @@ section {
     margin: 10px;
 }
 
-#class-list {
-    border: 1px solid black;
-    padding: 0px 10px 0px 10px;
-}
 @media (min-width:500px){
     .label {
         display: initial;
+    }
+    #class-list {
+        border: 1px solid black;
+        padding: 0px 10px 0px 10px;
     }
 }

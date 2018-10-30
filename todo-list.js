@@ -4,7 +4,7 @@ function makeTodo(tasks) {
     const html = /*html*/ `
     <li class="task-item">
         <p class="task">${tasks.task}</p>
-        <p>${tasks.date}</p>
+        <p>${tasks.date.toLocaleDateString()}</p>
         <button class="danger">X</button>
     </li>
 `;
