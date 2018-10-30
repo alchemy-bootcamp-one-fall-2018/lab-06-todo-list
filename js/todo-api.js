@@ -23,6 +23,10 @@ const todoApi = {
         return todoItems;
     },
     add(task) {
+        todoItems.push(task);
+        saveTasks();
+    }, 
+    remove(task) {
         const index = todoItems.indexOf(task);
         if(index !== -1) {
             todoItems.splice(index, 1);
@@ -30,7 +34,6 @@ const todoApi = {
         }
     }
 };
-
 
 
 

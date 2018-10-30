@@ -1,12 +1,13 @@
 function makeTodoList(todo){
     const html = /*html*/`
     <li class="taskItem">
-        <h3 class="task">
+        <h3 class="task $(todo.date < Date.now() ? 'date-passed' : ''}">
             ${todo.task}
         </h3>
         <p>Due Date:
             ${todo.date}
         </p>
+        <button class="remove">X</button>
     </li>
 `;
 
@@ -24,9 +25,9 @@ const list = document.getElementById('tasks');
 
 const todoList = {
     //initialize tasks array and calls back onRemove
-    init(tasks, onRemove){
-        for(let i = 0; i < tasks.length; i++) {
-            todoList.add(tasks[i]);
+    init(todoItems, onRemove){
+        for(let i = 0; i < todoItems.length; i++) {
+            todoList.add(todoItems[i]);
         }
         todoList.onRemove = onRemove;
     },
