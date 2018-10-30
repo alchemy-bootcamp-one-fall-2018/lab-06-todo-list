@@ -1,0 +1,59 @@
+body {
+    font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace; 
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.action {
+    background: #4d4055;
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 5px;
+}
+
+.caution {
+    background: rgb(172, 172, 95);
+    color: black;
+    border: 1px solid black;
+    padding: 5px;
+}
+
+.delete {
+    background: rgb(133, 77, 77);
+    color: whitesmoke;
+    border: 1px solid whitesmoke;
+    padding: 5px;
+}
+
+
+header {
+    background: #4d4055;
+    color: whitesmoke;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+header, section {
+    padding: 10px 20px;
+    background-size: 20px;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
+}
+
+#todos-list {
+    color: rgb(85, 83, 83);
+}
