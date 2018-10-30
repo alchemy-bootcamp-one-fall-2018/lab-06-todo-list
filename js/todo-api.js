@@ -1,12 +1,12 @@
 let toDos = [
-    {
-        task: 'Finish Lab',
-        due: new Date('10/30/2018').toLocaleString()
-    },
-    {
-        task: 'Finish Element Counter Lab',
-        due: new Date('11/01/2018').toLocaleString()
-    }
+    // {
+    //     task: 'Finish Lab',
+    //     due: new Date('10/30/2018').toLocaleString()
+    // },
+    // {
+    //     task: 'Finish Element Counter Lab',
+    //     due: new Date('11/01/2018').toLocaleString()
+    // }
 ];
 
 function saveToDos() {
