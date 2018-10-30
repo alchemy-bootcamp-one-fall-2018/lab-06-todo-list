@@ -19,22 +19,24 @@ function display(){
     let li = '';
     
     for(let i = 0; i < data.length; i++){
-        console.log(data[i].task);
-        li += '<li>' + data[i].task + '</li>';
+        li += '<li>' + data[i].task + '</li><button name="' + i + '">Remove</button>';
     }
     
     taskList.innerHTML = li;
 }
+
+taskList.addEventListener('click', function(event) {
+    let ind = event.target.name;
+    data.splice(ind);
+    display();
+});
 
 if(localStorage.getItem('todo')){
 
     display();
 
     form.addEventListener('submit', function(event){
-
         event.preventDefault();
-    
-        console.log('data', data);
         
         var item = {
             task: el.task.value,
