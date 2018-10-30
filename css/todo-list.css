@@ -4,14 +4,16 @@
 }
 
 
-.todo {
-  display: flex;
+li.todo {
+  width: 100%;
+  display: inline-flex;
+  flex-direction: row;
   justify-content: space-between;
-  margin: 5px;
+  align-items: center;
  
 }
 
-.todo .name {
+.todo .task {
   margin: 0;
   padding: 10px 0;
   width: 100%;
@@ -21,5 +23,6 @@
 .todo button {
   margin-bottom: 5px;
 }
+
 
 
