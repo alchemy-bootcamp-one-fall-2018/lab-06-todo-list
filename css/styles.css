@@ -1,0 +1,49 @@
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+main {
+    margin: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: flex-start;
+    background: #000000;
+    color: #ffffff;
+    padding: 10px;
+}
+
+#todo {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.label {
+    display: block;
+    text-transform: uppercase;
+    margin: 5px 0px 5px 0px;
+}
+
+section {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: flex-start;
+    font-size: 10px;
+    flex-direction: row;
+    margin: 10px;
+}
+
+@media (min-width:500px){
+    .label {
+        display: initial;
+    }
+}
+
+@media (max-width: 500px){
+    #class-list {
+        border: 1px solid black;
+        padding: 0px 10px 0px 10px;
+    }
+}
