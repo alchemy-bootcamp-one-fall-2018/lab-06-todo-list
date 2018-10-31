@@ -51,14 +51,9 @@ const toDoList = {
         // append to <ul>, this will empty the fragment
         list.appendChild(dom);
 
-        var aboutMeForm = document.getElementsByClassName('item');
-        var time = new Date();
-        var time2 = new Date(toDo.date);
-
-        for (var i = 0; i < aboutMeForm.length; i++) {
-            if(aboutMeForm !== null && time2 < time) {
-                aboutMeForm[i].classList.add('late');
-            }
+        var todoDate = new Date(toDo.date);
+        if(todoDate < new Date()) {
+            listItem.classList.add('late');
         }
     }
 };
