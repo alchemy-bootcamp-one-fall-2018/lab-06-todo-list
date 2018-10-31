@@ -1,11 +1,11 @@
 let items = [
     {
         name: 'Go Grocery Shopping', 
-        date: new Date(Date.UTC(2018,9, 12)).toLocaleDateString()
+        date: new Date(Date.UTC(2018, 9, 12)).toLocaleDateString()
     },
     {
         name: 'Take the Dog for a Walk',
-        date: new Date(Date.UTC(2018,9, 12)).toLocaleDateString()
+        date: new Date(Date.UTC(2018, 9, 12)).toLocaleDateString()
     }
 ]; 
 
@@ -39,5 +39,4 @@ const itemsApi = {
         }
     }
 }; 
-saveItems();
 export default itemsApi;

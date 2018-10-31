@@ -2,16 +2,13 @@
 function makeList(item) {
     const html = `
         <li class ="to-do">
-        <h3 class="item"> 
-        ${makeList.task}
-        </h3>
-            <h3 class=${new Date(makeList.due) > Date.now() ? 'date' : 'overdue'}> 
-            ${item.name} ${item.date} 
-            </h3> 
-            <div><button class="remove">Done</button></div>
+        <h3 class=${new Date(item.date) > Date.now() ? 'date' : 'overdue'}> 
+        ${item.name} ${item.date}
+        </h3> 
+        <div><button class="remove">Done</button></div>
         </li> 
-     `;
-    
+        `;
+        
     const template = document.createElement('template');
  
     template.innerHTML = html;
