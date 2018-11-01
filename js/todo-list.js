@@ -1,7 +1,6 @@
 /* eslint-disable no-console */
 'use strict';
 
-
 function makeTodo(todo) {
     const html = /*html*/`
         <li class="todo ${todo.date < Date.now() ? 'date-passed' : ''}">
