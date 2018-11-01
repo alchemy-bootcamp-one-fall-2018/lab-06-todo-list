@@ -17,11 +17,12 @@ li {
 
 .list {
     background-color: #eee9e9;
+    height: 1000px;
 }
 
 @media screen and (min-width: 350px) {
     li {
-        width: 250px;
+        width: 300px;
         display: inline-flex;
         justify-content: space-between;
     }
