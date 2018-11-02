@@ -1,12 +1,12 @@
 function makeTodoList(todo){
     const html = /*html*/`
     <li class="taskItem">
-        <h3 class="task $(todo.date < Date.now() ? 'date-passed' : ''}">
+        <h3 class="task $(task.date < Date.now() ? 'date-passed' : ''}">
             ${todo.task}
         </h3>
-        <p>Due Date:
+        <h4>Due Date:
             ${todo.date}
-        </p>
+        </h4>
         <button class="remove">X</button>
     </li>
 `;

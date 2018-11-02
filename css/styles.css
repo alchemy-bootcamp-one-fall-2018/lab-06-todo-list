@@ -19,6 +19,12 @@ body {
 
 }
 
+.danger {
+    background: red;
+    color: white;
+    border: 1px solid white;
+}
+
 ul{
    list-style: none; 
 }
