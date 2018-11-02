@@ -17,6 +17,7 @@ function saveTasks(){
 const todoApi = {
     getAll(){
         const json = localStorage.getItem('todoItems');
+        localStorage.setItem('tasks', JSON.stringify(todoItems));
         if(json) {
             todoItems = JSON.parse(json);
         }
