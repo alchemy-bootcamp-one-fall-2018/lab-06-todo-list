@@ -14,7 +14,7 @@ let todos = [
 ];
 
 function saveTodos() {
-    localStorage.setItem('todo', JSON.stringify(todos));
+    localStorage.setItem('todos', JSON.stringify(todos));
 }
 
 const todoApi = { 

@@ -2,13 +2,12 @@ function makeTodo(todo) {
     const html = /*html*/`
         <li class="todo">
             <h3 class="todo ${new Date(todo.date) < Date.now() ? 'overdue' : ''}">
-            ${todo.date.toLocaleDateString()} ${todo.task}
+            ${todo.date.toLocaleString()} ${todo.task}
             </h3>
             
             <button class="danger">Remove</button>
         </li>
         `;
-
     const template = document.createElement('template');
     
     template.innerHTML = html;
@@ -27,7 +26,6 @@ const todoList = {
     },
     add(todo) {
         const dom = makeTodo(todo);
-        
         const removeButton = dom.querySelector('button');
         const listItem = dom.querySelector('li');
 
