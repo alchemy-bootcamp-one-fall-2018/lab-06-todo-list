@@ -1,0 +1,11 @@
+#items {
+    margin: 50px;
+    line-height: 150%;
+    font-size:12px;
+    display:block;
+    background:lightgray;
+    opacity:0.7;
+}
+.overdue {
+    background-color:red;
+}
