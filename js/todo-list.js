@@ -1,4 +1,6 @@
-export default tasklist
+/* eslint-disable no-unused-vars */
+/* eslint-disable no-undef */
+export default tasklist;
 
 function makeTask(tasks) {
     const html = /*html*/`
@@ -22,21 +24,22 @@ const list = document.getElementById('tasks');
 const tasklist = {  
 
     init(tasks, onRemove) {
-        for(let i=0; i < tasks.length; i++) {
+        for(let i = 0; i < tasks.length; i++) {
             tasklist.onRemove = onRemove;
-    },
-    add(tasks); {
-        const dom = makeTask(tasks);
-        const removeButton = dom.querySelector('button');
-        const listItem = dom.querySelector('li');
-    }
+        }
+        add(tasks); {
+            const dom = makeTask(tasks);
+            const removeButton = dom.querySelector('button');
+            const listItem = dom.querySelector('li');
+        }
 
-    removeButton.addEventListener('click', function() {
-        tasklist.onRemove(tasks);
-        listItem.remove();
+        removeButton.addEventListener('click', function() {
+            tasklist.onRemove(tasks);
+            listItem.remove();
 
-    });
-    listItem.appendChild(dom);
+        });
+    // eslint-disable-next-line no-undef
+        listItem.appendChild(dom);
     }
 };
 

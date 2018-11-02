@@ -12,5 +12,6 @@ tasklist.init(tasks, function(tasks) {// need to find and refine
 addtasks.init(function(tasks) {
     tasksApi.add(tasks);
     tasklist.add(tasks); //find or create this
-    console.log('please do something!');
+    // eslint-disable-next-line no-console
+
 });

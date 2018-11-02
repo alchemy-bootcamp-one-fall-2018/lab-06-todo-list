@@ -8,10 +8,7 @@ body {
 * {
     box-sizing: border-box; color: #000;
 
-.action {
-    background: #39499B;
-    color: white;
-    border: 1px solid white;
+
 }
 
 .caution {
