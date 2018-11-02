@@ -9,7 +9,7 @@ const addTodo = {
 
             const todo = {
                 task: elements.task.value,
-                date: elements.date.value,
+                date: new Date (elements.date.value),
             };
             onAdd(todo);
         });
