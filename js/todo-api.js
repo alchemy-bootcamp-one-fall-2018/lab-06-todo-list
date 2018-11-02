@@ -14,12 +14,17 @@ function saveTasks(){
     localStorage.setItem('tasks', JSON.stringify(todoItems));
 }
 
+function newParser(key, value) {
+    if(key !== 'date') return value;
+    return new Date(value);
+}
+
 const todoApi = {
     getAll(){
         const json = localStorage.getItem('todoItems');
         localStorage.setItem('tasks', JSON.stringify(todoItems));
         if(json) {
-            todoItems = JSON.parse(json);
+            todoItems = JSON.parse(json, newParser);
         }
         return todoItems;
     },
