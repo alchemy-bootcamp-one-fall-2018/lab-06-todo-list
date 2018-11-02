@@ -1,7 +1,7 @@
 function makeTodo(todo) {
     const html = /*html*/`
         <li class="todo">
-            <h3 class="todo ${todo.date} < Date.now()? 'overdue' : ''}">
+            <h3 class="todo ${new Date(todo.date) < Date.now() ? 'overdue' : ''}">
             ${todo.date.toLocaleDateString()} ${todo.task}
             </h3>
             
