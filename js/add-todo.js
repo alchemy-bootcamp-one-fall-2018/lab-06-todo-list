@@ -8,7 +8,9 @@ const addForm = {
             const elements = form.elements;
             const todo = {} ;
 
-            todo.name = elements.task.value;
+            todo.task = elements.task.value;
+            todo.dueDate = elements.date.value;
+            todo.notes = elements.notes.value;
             
             onAdd(todo);
         });

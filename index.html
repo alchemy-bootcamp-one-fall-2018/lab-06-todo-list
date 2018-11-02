@@ -21,18 +21,18 @@
                     </legend>
                     <div>
                         <label for="task">Task:</label>
-                        <input type="text" name="task" id="task">
+                        <input required type="text" name="task" id="task">
                     </div>
                     
-                    <!-- <div>
-                    <label for="due">Due:</label>
-                    <input type="date" id="date">
+                    <div>
+                        <label for="due">Due:</label>
+                        <input required  type="date" name="date" id="date">
                     </div>
-
+                    
                     <div>
                         <label for="notes">Notes</label>
-                        <input type="text" id="notes">
-                    </div> -->
+                        <input type="text" name="notes"id="notes">
+                    </div> 
 
                 </fieldset>
     
@@ -42,7 +42,7 @@
 
         <section>
             <h2>Tasks</h2>
-            <ul id="tasks"></ul>
+            <ul id="tasks-list"></ul>
         </section>
     </main>
 
