@@ -2,12 +2,13 @@ import addTask from './add.js';
 import taskList from './list.js';
 import taskApi from './api.js';
 
-const task = taskApi.getAll();
+const tasks = taskApi.getAll();
 
 taskList.init(tasks, function(task) {
     // this is the onRemove listener
 
     taskApi.remove(task);
+    
 });
 
 addTask.init(function(task) {
@@ -19,3 +20,5 @@ addTask.init(function(task) {
     // then update components
     taskList.add(task);
 });
+
+

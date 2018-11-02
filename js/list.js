@@ -1,19 +1,20 @@
 
 
-function makeTask(task) {
+function makeTask(todo) {
     const html = /*html*/`
             <li class="task">
-                <h3 class="name" style="background: ${task.color}">
-                ${task.name}
-                </h3>
+                <h2 class="task">
+                ${todo.task}
+                ${todo.date}
+                ${todo.done}
+                </h2>
                 <img src="img/sleep.jpg">
                 <button class="danger">X</button>
             </li>
         `;
     
     const template = document.createElement('template');
-    
-        // B. Assign innerHTML property
+
     template.innerHTML = html;
     
         // C. Return the `content` property which is the dom
@@ -26,7 +27,7 @@ const list = document.getElementById('tasks');
 const taskList = {
         // init
         // should include:
-        // 1. initial task array
+        // 1. initial task array 
     init(task, onRemove) {
         for(let i = 0; i < task.length; i++) {
             taskList.add(task[i]);
@@ -49,3 +50,9 @@ const taskList = {
 };
     
 export default taskList;
+
+
+
+
+
+

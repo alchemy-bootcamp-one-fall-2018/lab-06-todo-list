@@ -1,12 +1,12 @@
  
-h1 { background-color: forestgreen
-
-
+header {
+     background-color: forestgreen;
 }
 h2 {
-    margin-right: 10px;
+    background-color: forestgreen;
     font-size: 1.25em;
-}
+    margin-right: 10px;
+}  
 
 form {
     display: flex;
@@ -43,6 +43,5 @@ button {
 
 img {
     width: 20%
-    height: 20%
 
 }

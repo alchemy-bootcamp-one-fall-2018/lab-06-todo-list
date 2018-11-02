@@ -1,12 +1,6 @@
 
 let tasks = [
-    {
-        name: 'Sleep',
-        due:  '10/29/18',
-        done: true 
-
-
-    }
+   
 ];
 
 function saveTasks() {
