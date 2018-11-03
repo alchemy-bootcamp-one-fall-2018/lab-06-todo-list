@@ -1,25 +1,25 @@
 'use strict';
 
-const toDoItem = {
+const addTodo = {
     
     init(onAdd) {
         const form = document.getElementById('add-form');
+
         form.addEventListener('submit', function(event) {
             event.preventDefault();
+
             const elements = form.elements;
+            const date = new Date(elements.due.value);
 
             const task = {
                 name: elements.task.value,
-                date: elements.date.value
+                date: date
             };
 
             onAdd(task);
-
-            form.requestFullscreen();
-            document.activeElement.blur();
 
         });
     } 
 };
 
-export default toDoItem;
+export default addTodo;
