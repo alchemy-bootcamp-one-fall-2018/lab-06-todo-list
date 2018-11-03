@@ -4,27 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Get Things Done</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
     <header>
         <h1>Get Stuff Done</h1>
     </header>
     <main>
-        <h2>Add a Task!</h2>
-        <section id="add-task">
+        <fieldset id="add a task"> 
+            <legend>Add a Task!</legend>
+            <section id="add-task">
             <form id="add-form">
                 <label>
                     Task:
-                    <input required name="chore">
+                    <input name="chore" required>
                 </label>
                 <label>
                     Due Date:
-                    <input required name="due">
+                    <input type="date" name="due">
                 </label>
                     <button class="action">Add</button>
             </form>
-        </section>
+            </section>
+        </fieldset>
+       
+        
         <section>
             <h2>Tasks to get done:</h2>
             <ul id="tasks"></ul>    <!--where the tasks will go, imported from xx.js-->
