@@ -26,6 +26,7 @@ const taskList = {
         }
         taskList.onRemove = onRemove;
     },
+
     add(task) {
         const dom = makeTask(task);
         const removeButton = dom.querySelector('button');

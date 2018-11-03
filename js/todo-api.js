@@ -1,11 +1,11 @@
 let tasks = [
     {
         chore: 'wash dog',
-        due: new Date('2018-11-27'),
+        due: new Date('2018/11/27'),
     },
     {
         chore: 'laundry',
-        due: new Date('2018-12-13'),
+        due: new Date('2018/12/13'),
     }
 ];
 
@@ -13,14 +13,26 @@ function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
+// function customParser(tasks) {
+//     if(tasks !== 'due') return tasks;
+//     return new Date(tasks.due);
+// }
+
 const taskApi = {
     getAll() {
         const json = localStorage.getItem('tasks');
         if(json) {
-            tasks = JSON.parse(json);     //get data from local storage
-        }                                  //if there is anything there, 
-        return tasks;                                    //parse, or convert to string
+            tasks = JSON.parse(json); 
+        }                                   
+        return tasks;                                    
     },
+
+    // check(task) {
+    //     let today = new Date();
+    //     if(task.due < today) {
+    //         console.log('test');
+    //     }
+    // },
 
     add(task) {
         tasks.push(task);
@@ -34,7 +46,7 @@ const taskApi = {
             saveTasks();
         }
     }
-};
 
+};
 
 export default taskApi;
