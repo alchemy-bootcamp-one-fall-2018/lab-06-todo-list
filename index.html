@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Get Things Done</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <header>
@@ -14,17 +14,17 @@
     <main>
         <fieldset id="add a task"> 
             <legend>Add a Task!</legend>
-            <section id="add-task">
+            <section class="add-form">
             <form id="add-form">
                 <label>
                     Task:
-                    <input name="chore" required>
+                    <input name="chore">
                 </label>
                 <label>
                     Due Date:
                     <input type="date" name="due">
                 </label>
-                    <button class="action">Add</button>
+                    <button name="submit" value="submit" class="action">Add</button>
             </form>
             </section>
         </fieldset>
@@ -35,5 +35,7 @@
             <ul id="tasks"></ul>    <!--where the tasks will go, imported from xx.js-->
         </section>    
     </main>
+
+    <script type="module" src="js/app.js"></script>
 </body>
 </html>
