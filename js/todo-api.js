@@ -1,4 +1,5 @@
-let tasks = [
+let tasks = [   
+    //example chores for display
     {
         chore: 'wash dog',
         due: new Date('2018/11/27'),
@@ -13,11 +14,6 @@ function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
-// function customParser(tasks) {
-//     if(tasks !== 'due') return tasks;
-//     return new Date(tasks.due);
-// }
-
 const taskApi = {
     getAll() {
         const json = localStorage.getItem('tasks');
@@ -26,13 +22,6 @@ const taskApi = {
         }                                   
         return tasks;                                    
     },
-
-    // check(task) {
-    //     let today = new Date();
-    //     if(task.due < today) {
-    //         console.log('test');
-    //     }
-    // },
 
     add(task) {
         tasks.push(task);

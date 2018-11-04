@@ -1,0 +1,9 @@
+li {
+    color: darkblue;
+    list-style: none;
+}
+
+html {
+    text-align: center;
+    margin: 10px;
+}
