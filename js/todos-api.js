@@ -2,7 +2,7 @@
 let toDos = [
     {
         task: 'Wash car',
-        due: new Date('11/10/2018')
+        date: new Date('11/10/2018')
     },
     {
         task: 'Clean apartment',
