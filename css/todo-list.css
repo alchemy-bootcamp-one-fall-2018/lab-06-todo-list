@@ -17,12 +17,29 @@ li.todo {
   margin: 0;
   padding: 10px 0;
   width: 100%;
-  text-align: center;
+  text-align: left;
+}
+
+.todo .date {
+  margin: 0;
+  padding: 10px 0;
+  width: 100%;
+  text-align: left;
 }
 
 .todo button {
   margin-bottom: 5px;
 }
 
+.overdue {
+  color: red;
+}
 
+@media screen and (min-width: 350px) {
+  li {
+      width: 300px;
+      display: inline-flex;
+      justify-content: space-between;
+  }
+}
 
