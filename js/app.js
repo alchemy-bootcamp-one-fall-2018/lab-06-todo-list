@@ -1,19 +1,19 @@
 import addToDo from './add-todo.js';
 import toDoList from './todo-List.js';
-import toDoApi from './todo-api.js';
+import toDosApi from './todos-api.js';
 
-const toDo = toDoList.getAll();
+const toDos = toDosApi.getAll();
 
-toDoList.init(toDo, function() {
+toDoList.init(toDos, function(toDo) {
     // this is the onRemove listener
-    toDoList.onRemove();
+    toDosApi.remove(toDo);
 });
 
 addToDo.init(function(toDo) {
     // this is the onAdd listener
 
     // tell the api service first
-    toDoApi.add(toDo);
+    toDosApi.add(toDo);
 
     // then update components
     toDoList.add(toDo);

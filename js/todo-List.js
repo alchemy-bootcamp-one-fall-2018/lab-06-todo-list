@@ -1,7 +1,15 @@
-function makeList(toDo) {
+
+'use strict';
+
+function makeList(list) {
     const html = /*html*/`
-        <li class="toDo">
-            <h3  ${toDo.due};"></h3>
+        <li class="todo ${list.date < Date.now() ? 'date-passed' : ''}">
+            <h3 class="task">
+                ${list.task}
+            </h3>
+            <h4 class="date">
+                ${list.date}
+            </h4>
             <button class="danger">X</button>
         </li>
         `;
@@ -14,9 +22,9 @@ function makeList(toDo) {
 const list = document.getElementById('list');
 
 const toDoList = {
-    init(toDo, onRemove) {
-        for(let i = 0; i < toDo.length; i++) {
-            toDo.add(toDo[i]);
+    init(list, onRemove) {
+        for(let i = 0; i < list.length; i++) {
+            toDoList.add(list[i]);
         }
         toDoList.onRemove = onRemove;
     },
