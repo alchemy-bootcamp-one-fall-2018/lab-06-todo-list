@@ -2,17 +2,17 @@
 let todos = [
     {
         task: 'Finish lab',
-        due: new Date('1/30/18'), //Date objects are created with the new Date() constructor
-        done: true
+        due: new Date('10/30/2018'),
+        done: false
     },
     { 
         task: 'Bake cookies',
-        due: new Date('10/29/18'),
-        done: true
+        due: new Date('10/31/2018'),
+        done: false
     },
     { 
         task: 'Do laundry',
-        due: new Date('10/30/18'),
+        due: new Date('11/04/2018'),
         done: false
     }
 ];
@@ -25,15 +25,17 @@ function saveTodos() {
 // get all of the above todos
 const todoApi = {
     getAll() {
-        const json = localStorage.getItem('todos');
+        const json = localStorage.getItem(todos);
         if(json) {
             todos = JSON.parse(json);
         }
         return todos;
+
     },
     add(todo) {
         // add to array
         todos.push(todo);
+
         // save array to local scope
         saveTodos();
     },

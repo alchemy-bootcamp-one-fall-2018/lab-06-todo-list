@@ -10,6 +10,7 @@ h6 {
 h3 {
     color: purple;
     text-decoration: underline;
+    margin-right: 30px;
 }
 input {
     height: 2em;

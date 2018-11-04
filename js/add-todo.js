@@ -1,9 +1,7 @@
 
 const addTodo = {
-
     init(onAdd) {
         const form = document.getElementById('add-todo-form');
-
 
         form.addEventListener('submit', function(event) {
             event.preventDefault();
@@ -12,10 +10,10 @@ const addTodo = {
             const todo = {
                 task: elements.task.value,
                 due: elements.due.value,
-                done: elements.done.value,
+                done: elements.done.checked,
             };
 
-            onAdd(todo);
+            onAdd(todo); // child is saying hey parent do this
 
             form.reset();
             document.activeElement.blur();
