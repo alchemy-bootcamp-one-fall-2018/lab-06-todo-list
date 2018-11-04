@@ -5,13 +5,13 @@ import addTodo from './add-todo.js';
 
 const todos = todoApi.getAll();
 
-
-todoList.init(todos, function(todo) {
-    todoApi.remove(todo);
-});
-
-
 addTodo.init(function(todo) {
     todoApi.add(todo);
     todoList.add(todo);
+});
+
+
+
+todoList.init(todos, function(todo) {
+    todoApi.remove(todo);
 });
