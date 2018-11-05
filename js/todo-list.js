@@ -1,7 +1,7 @@
 function addTask(todo) {
     const html = /*html*/`
         <li class="task">
-            <h3 class="task-name">
+            <h3 class=${new Date(todo.dueDate) < Date.now() ? 'overdue' : '' }  >
                 ${todo.task}
             </h3>
             <p> ${todo.dueDate} </p>

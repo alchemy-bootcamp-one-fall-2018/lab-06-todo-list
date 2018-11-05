@@ -5,3 +5,7 @@ h2 {
 #tasks {
     color : gray;
 }
+
+.overdue {
+    color : red;
+}
