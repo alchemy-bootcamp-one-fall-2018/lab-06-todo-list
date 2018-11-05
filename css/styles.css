@@ -1,0 +1,13 @@
+h1 {
+    text-align: center;
+}
+
+legend {
+    font-size: 24px;
+}
+
+body {
+    background-color: lightcyan;
+    border-style: groove;
+    border-color: darkblue;
+}
