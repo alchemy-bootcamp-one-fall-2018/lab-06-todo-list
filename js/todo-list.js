@@ -1,35 +1,37 @@
 function makeItem(toDo) {
     const html = /*html*/`
-        <li class="toDoItem">
-            <h3 class="specificItem">
+        <li class="task">
+            <h3 class="item">
                 ${toDo.todo}
-            </li>`;
-
-    // A. Create template element to convert string to DOM
+                ${toDo.due}
+            </h3>
+        </li>
+    `;
+// date is not showing
     const template = document.createElement('template');
-
-    // B. Assign innerHTML property
     template.innerHTML = html;
-
-    // C. Return the `content` property which is the dom
-    // (In a DocumentFragment)
     return template.content;
 }
-// const list = document.getElementById('listItems');
+
+const list = document.getElementById('listItems');
 
 const toDoList = {
 //     // init
 //     // should include:
 //     // 1. initial items array
 //     // 1. onRemove callback
-    init(listItems) {
+    init(listItems, onRemove) { //was fruits??
         for(let i = 0; i < listItems.length; i++) {
             toDoList.add(listItems[i]);
         }
-        add(toDo) {
-            const dom = makeItem(toDo);
-        }
+        toDoList.onRemove = onRemove;
+    },
+    add(toDo) {
+        const dom = makeItem(toDo);
+//        const listItem = dom.querySelector('li');
+
         list.appendChild(dom);
+    }
 };
 
 export default toDoList;

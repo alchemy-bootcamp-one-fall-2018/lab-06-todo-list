@@ -11,13 +11,8 @@ toDoList.init(listItems, function(toDo) {
     toDoApi.remove(toDo);
 });
 
-form.addEventListener('submit', function(event) {
+addToDoItem.init(function(toDo) {
 
-    addToDoItem.init(function(toDo) {
-    //onAdd listener
-        toDoApi.add(toDo);
-    //tell api service
-        toDoList.add(toDo);
-    //update components of list
-    });
+    toDoApi.add(toDo);
+    toDoList.add(toDo);
 });
