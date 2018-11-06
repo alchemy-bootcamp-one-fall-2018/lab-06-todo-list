@@ -1,10 +1,32 @@
+import html from './html.js';
 
-const addToDo = {
-    init(onAdd) {
-        
-        const form = document.getElementById('add-form');
-        
-        form.addEventListener('submit', function(event) {
+function makeTemplate() {
+    return html`
+    <form id="add-form">
+                <label id="task">
+                    Task:
+                    <input required name="task">
+                </label>
+                <label id="due" >
+                    Due:
+                    <input required name="due">
+                </label>
+                <label id="addButton">
+                    <button class="action">Add</button>
+                </label>
+            </form>
+            `;
+}
+
+class AddToDo {
+    constructor(onAdd) {
+        this.onAdd = onAdd;
+    }
+    render() {
+        const dom = makeTemplate();
+        const form = dom.querySelector('form');
+
+        form.addEventListener('submit', event => {
             event.preventDefault();
             
             const elements = form.elements;
@@ -12,15 +34,14 @@ const addToDo = {
                 task: elements.task.value,
                 due: elements.due.value
             };
-
-            onAdd(toDo);
-
+    
+            this.onAdd(toDo);
             form.reset();
             document.activeElement.blur();
         });
-    
-    
+        return dom;
     }
-};
 
-export default addToDo;
+}
+
+export default AddToDo;
