@@ -38,7 +38,6 @@ class ToDoList {
     }
     add(toDo) {
         const dom = makeToDo(toDo);
-        const listItem = dom.querySelector('li');
         if(this.onRemove) {
             const removeButton = dom.querySelector('button');
             removeButton.addEventListener('click', () => {
