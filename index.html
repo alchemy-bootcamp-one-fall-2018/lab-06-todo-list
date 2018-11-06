@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ToDos</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/todo-list.css">
+    <link rel="stylesheet" href="css/add-todo.css">
+</head>
+<body>
+    <h1>To Do List</h1>
+    <main>
+        <section id="add-task">
+
+            <p>Use the boxes below to enter your tasks, then click the submit button</p>
+            <form id="add-todo">
+                
+                <fieldset>
+
+                    <legend>
+                        Task
+                    </legend>
+                    <div>
+                        <label for="task">Task:</label>
+                        <input required type="text" name="task" id="task">
+                    </div>
+                    
+                    <div>
+                        <label for="due">Due:</label>
+                        <input required  type="date" name="date" id="date">
+                    </div>
+                    
+                    <div>
+                        <label for="notes">Notes</label>
+                        <input type="text" name="notes" id="notes">
+                    </div> 
+
+                </fieldset>
+    
+                <button type="submit" onclick="">Add</button>
+            </form>
+        </section>
+
+        <section id="tasks">
+            <h2>Tasks</h2>
+            <ul id="tasks-list"></ul>
+        </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+      
+</body>
+</html>
+
+
+

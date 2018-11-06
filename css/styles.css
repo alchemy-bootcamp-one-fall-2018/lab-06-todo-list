@@ -1,0 +1,16 @@
+body {
+    background-color : lightpink;
+    font-family : 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    background-color: bisque;
+    color : gray;
+    border : 0;
+    margin : 0;
+}
+
+button {
+    background: bisque;
+    color : gray;
+}
