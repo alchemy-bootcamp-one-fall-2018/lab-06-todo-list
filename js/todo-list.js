@@ -21,32 +21,6 @@ function makeToDo(toDo) {
 
 }
 
-// const list = document.getElementById('toDos');
-
-// const toDoList = {
-//     init(toDos, onRemove) {
-//         for(let i = 0; i < toDos.length; i++) {
-//             toDoList.add(toDos[i]);
-//         }
-//         toDoList.onRemove = onRemove;
-//     },
-//     add(toDo) {
-//         const dom = makeToDo(toDo);
-//         const removeButton = dom.querySelector('button');
-//         const listItem = dom.querySelector('li');
-
-//         removeButton.addEventListener('click', function() {
-//             toDoList.onRemove(toDo);
-//             listItem.remove();
-//         });
-
-//         list.appendChild(dom);
-
-//     }
-// };
-
-// -_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_-_- //
-
 class ToDoList {
     constructor(toDos, onRemove) {
         this.toDos = toDos;
@@ -65,9 +39,10 @@ class ToDoList {
     add(toDo) {
         const dom = makeToDo(toDo);
         const listItem = dom.querySelector('li');
-        if(this.onSelect) {
-            listItem.addEventListener('click', () => {
-                this.onSelect(toDo);
+        if(this.onRemove) {
+            const removeButton = dom.querySelector('button');
+            removeButton.addEventListener('click', () => {
+                this.onRemove(toDo);
             });
         }
         this.list.appendChild(dom);

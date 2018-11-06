@@ -25,6 +25,7 @@ const toDoApi = {
         if(index !== -1) {
             toDos.splice(index, 1);
             saveToDos();
+            return index;
         }
     }
 };

@@ -32,7 +32,8 @@ class App {
         });
 
         const toDoList = new ToDoList(toDos, toDo => {
-            toDoApi.remove(toDo);
+            const index = toDoApi.remove(toDo);
+            toDoList.remove(index);
         });
 
         addToDoSection.appendChild(addToDo.render());
