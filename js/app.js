@@ -1,21 +1,21 @@
-import addTo from './add-to.js';
-import toDoList from './list.js';
+import AddTo from './add-to.js';
+import ToDoList from './list.js';
 import listApi from './list-api.js';
 
 const lists = listApi.getAll();
-
-toDoList.init(lists, function(list) {
+constructor(ToDoList);
+this.init(lists, list => 
     //this will be the onRemove listener
-    listApi.remove(list);
-});
+    listApi.remove(list));
 
 
-addTo.init(function(list) {
+
+AddTo.init(list => {
 //this will be the onAdd listener
 //tell the api first
     listApi.add(list);
 //then update components
-    toDoList.add(list);
+    this.add(list);
 });
 //fix remove button
 
