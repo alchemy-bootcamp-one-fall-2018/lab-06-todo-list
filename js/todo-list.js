@@ -1,9 +1,9 @@
 
 function makeTodo(task) {
     const html = /*html*/`
-    <li class="task-item">
+    <li class="task-item" ${task.date}>
         <p class="task">${task.task}</p>
-        <p class="date">${task.date}</p>
+        <p class=${new Date(task.date) > Date.now() ? 'date-passed' : 'late'}>${task.date.toLocaleString()}</p>
         <button class="danger">X</button>
     </li>
 `;

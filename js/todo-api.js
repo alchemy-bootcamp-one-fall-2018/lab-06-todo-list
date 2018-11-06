@@ -21,9 +21,9 @@ function customParser(key, value) {
 
 const todoApi = {
     getAll() {
-        const json = localStorage.getItem('tasks');
-        if(json){
-            tasks = JSON.parse(json, customParser);
+        const saved = localStorage.getItem('tasks');
+        if(saved){
+            tasks = JSON.parse(saved, customParser);
         }
         return tasks;
     },

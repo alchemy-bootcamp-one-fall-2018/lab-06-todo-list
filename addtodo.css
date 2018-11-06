@@ -1,3 +1,7 @@
+.late {
+    border: 3px solid red;
+}
+
 form {
     display: flex;
     align-items: center;
