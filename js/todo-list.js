@@ -3,11 +3,11 @@ function makeItem(toDo) {
         <li class="task">
             <h3 class="item">
                 ${toDo.todo}
-                ${toDo.due}
+                ${toDo.date}
             </h3>
         </li>
     `;
-// date is not showing
+// date is not showing - line 6 was toDo.due
     const template = document.createElement('template');
     template.innerHTML = html;
     return template.content;
