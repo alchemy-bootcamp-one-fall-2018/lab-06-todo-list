@@ -2,7 +2,7 @@ const form = document.getElementById('add-todo');
 
 const addForm = {
     init(onAdd) {
-        form.addEventListener('submit', function(event) {
+        form.addEventListener('submit', (event) => {
             event.preventDefault();
 
             const elements = form.elements;

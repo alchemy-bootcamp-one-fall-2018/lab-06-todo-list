@@ -4,11 +4,11 @@ import taskList from './js/todo-list.js';
 
 const tasks = tasksApi.getAll();
 
-taskList.init(tasks, function(task) {
+taskList.init(tasks, (task) => {
     tasksApi.remove(task);
 });
 
-addForm.init(function(task) {
+addForm.init((task)=> {
     tasksApi.add(task);
     taskList.add(task);
 });
