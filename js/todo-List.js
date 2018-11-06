@@ -3,7 +3,7 @@
 
 function makeList(list) {
     const html = /*html*/`
-        <li class="todo ${list.date < Date.now() ? 'date-passed' : ''}">
+        <li class="todo ${new Date(list.date) < Date.now() ? 'date-passed' : ''}">
             <h3 class="task">
                 ${list.task}
             </h3>
