@@ -4,7 +4,7 @@
 }
 
 body {
-    font-family: Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0;
 }
 
@@ -23,7 +23,7 @@ section {
 
 h1 {
     font-size: 4em;
-    margin-right: 10%;
+    margin-right: 3%;
     text-align: center;
 }
 
@@ -40,9 +40,9 @@ h4 {
 
 img {
     display: flex;
-    max-height: 80px;
+    max-height: 140px;
     justify-content: flex-start;
-    padding-right: 7%;
+    padding-right: 3%;
 }
 
 .danger {
