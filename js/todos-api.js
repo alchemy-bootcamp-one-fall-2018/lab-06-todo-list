@@ -1,8 +1,10 @@
 
 let tasks = [
+    {
+        name: 'Sleep',
+    },
    
 ];
-
 function saveTasks() {
     localStorage.setItem('tasks', JSON.stringify(tasks));
 }
@@ -17,7 +19,6 @@ const tasksApi = {
     },
     add(task) {
         tasks.push(task);
-        //save array to local storage
         saveTasks();
     },
     remove(task) {
@@ -25,7 +26,7 @@ const tasksApi = {
         if(index !== -1) {
             tasks.splice(index, 1);
             saveTasks();
-
+            return index;
         }
     }
 };

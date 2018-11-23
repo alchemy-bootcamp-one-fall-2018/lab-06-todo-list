@@ -1,24 +1,47 @@
-import addTask from './add.js';
-import taskList from './list.js';
-import taskApi from './api.js';
+import html from './html.js';
+import TodoList from './todo-list.js';
+import AddTodo from './add-todo.js';
+import todosApi from './todos-api.js';
 
-const tasks = taskApi.getAll();
+const todos = todosApi.getAll();
 
-taskList.init(tasks, function(task) {
-    // this is the onRemove listener
+function makeTemplate() {
+    return html`
+        <main>
+            <section id="add-todo">
+                <h2>Add a To-Do List Item</h2>
+            </section>
+            <section id="list">
+                <h2>To-Do List</h2>
+            </section>
+        </main>
+    `;
+}
 
-    taskApi.remove(task);
-    
-});
+class TodoApp {
+    render() {
+        const dom = makeTemplate();
 
-addTask.init(function(task) {
-    // this is the onAdd listener
+        const addTodoSection = dom.querySelector('#add-todo');
+        const todoListSection = dom.getElementById('list');
 
-    // tell the api service first
-    taskApi.add(task);
+        const todoList = new TodoList(todos, todo => {
+            const index = todosApi.remove(todo);
+            todoList.remove(index);
+        });
 
-    // then update components
-    taskList.add(task);
-});
+        todoListSection.appendChild(todoList.render());
 
+        const addTodo = new AddTodo(todo => {
+            todosApi.add(todo);
+            todoList.add(todo);
+        });
 
+        addTodoSection.appendChild(addTodo.render());
+
+        return dom;
+    }
+}
+
+const app = new TodoApp();
+document.getElementById('root').appendChild(app.render());
