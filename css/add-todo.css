@@ -1,6 +1,7 @@
 #add-todo {
-    background: darkgray;
+    background: rgb(201, 178, 75);
     color: black;
+    border: 2pt;
 }
 
 form {
